@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F020808626A0334300B05E39 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020808526A0334300B05E39 /* main.cpp */; };
+		F020809626A0351F00B05E39 /* qwirkle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020808C26A0351E00B05E39 /* qwirkle.cpp */; };
+		F020809726A0351F00B05E39 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020808D26A0351E00B05E39 /* Tile.cpp */; };
+		F020809826A0351F00B05E39 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020808F26A0351E00B05E39 /* LinkedList.cpp */; };
+		F020809926A0351F00B05E39 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020809126A0351E00B05E39 /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,16 @@
 
 /* Begin PBXFileReference section */
 		F020808226A0334300B05E39 /* Qwrikle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Qwrikle; sourceTree = BUILT_PRODUCTS_DIR; };
-		F020808526A0334300B05E39 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F020808C26A0351E00B05E39 /* qwirkle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qwirkle.cpp; sourceTree = SOURCE_ROOT; };
+		F020808D26A0351E00B05E39 /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = SOURCE_ROOT; };
+		F020808E26A0351E00B05E39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		F020808F26A0351E00B05E39 /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = SOURCE_ROOT; };
+		F020809026A0351E00B05E39 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile; sourceTree = SOURCE_ROOT; };
+		F020809126A0351E00B05E39 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = SOURCE_ROOT; };
+		F020809226A0351F00B05E39 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = SOURCE_ROOT; };
+		F020809326A0351F00B05E39 /* TileCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCodes.h; sourceTree = SOURCE_ROOT; };
+		F020809426A0351F00B05E39 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = SOURCE_ROOT; };
+		F020809526A0351F00B05E39 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +69,16 @@
 		F020808426A0334300B05E39 /* Qwrikle */ = {
 			isa = PBXGroup;
 			children = (
-				F020808526A0334300B05E39 /* main.cpp */,
+				F020808F26A0351E00B05E39 /* LinkedList.cpp */,
+				F020809426A0351F00B05E39 /* LinkedList.h */,
+				F020809026A0351E00B05E39 /* Makefile */,
+				F020809126A0351E00B05E39 /* Node.cpp */,
+				F020809226A0351F00B05E39 /* Node.h */,
+				F020808C26A0351E00B05E39 /* qwirkle.cpp */,
+				F020808E26A0351E00B05E39 /* README.md */,
+				F020808D26A0351E00B05E39 /* Tile.cpp */,
+				F020809526A0351F00B05E39 /* Tile.h */,
+				F020809326A0351F00B05E39 /* TileCodes.h */,
 			);
 			path = Qwrikle;
 			sourceTree = "<group>";
@@ -118,7 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F020808626A0334300B05E39 /* main.cpp in Sources */,
+				F020809726A0351F00B05E39 /* Tile.cpp in Sources */,
+				F020809826A0351F00B05E39 /* LinkedList.cpp in Sources */,
+				F020809626A0351F00B05E39 /* qwirkle.cpp in Sources */,
+				F020809926A0351F00B05E39 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
