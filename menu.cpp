@@ -13,17 +13,15 @@ using std::endl;
 using std::string;
 using std::stringstream;
 
-
-
 // string player1, player2;
 
 int mainMenu() {
     cout << "Menu" << endl;
     cout << "----" << endl;
     cout << GREEN << "1. New Game" << RESET << endl;
-    cout << YELLOW << "2. Load Game" << RESET << endl;
+    cout << YELLOW_BACKGROUND << "2. Load Game" << RESET << endl;
     cout << BLUE << "3. Credits (Show student information)" << RESET << endl;
-    cout << GRNB << "4. Quit" << RESET << endl;
+    cout << RED_BACKGROUND << "4. Quit" << RESET << endl;
 
     int selected = 0;
     string input;
