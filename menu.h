@@ -8,6 +8,7 @@
 // https://www.codegrepper.com/code-examples/actionscript/ansi+colors+orange
 // https://solarianprogrammer.com/2019/04/08/c-programming-ansi-escape-codes-windows-macos-linux-terminals/
 
+
 // Resets everything back to the standard colour.
 #define RESET   "\033[0m"
 // Text Colours
@@ -26,5 +27,26 @@
 #define BLUE_BACKGROUND     "\033[44m"
 #define MAGENTA_BACKGROUND  "\033[45m"
 
+
+// ----------------------------------------------------------------
+// enum Colour {
+//     // Resets everything back to the standard colour.
+//     RESET = '\033[0m'
+// };
+/* 
+class Menu {
+public:
+   Menu(Colour colour, int number);
+   Menu(Menu& other);
+   ~Menu();
+
+   Colour getColour();
+   int getNumber();
+
+private:
+   Colour* colour;
+   int* number;
+};
+ */
 
 #endif // ASSIGN2_ESCAPECODECOLOURS_H
