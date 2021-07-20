@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "Student.h"
+#include "Tile.h"
+#include "TileCodes.h"
 
 #define EXIT_SUCCESS    0
 
@@ -28,6 +30,27 @@ int main(void) {
     
     delete phil;
     
+    // testing new shape
+    std::cout << "Creating a new Tiles" << std::endl;
+    Tile* redCircle = new Tile(RED, CIRCLE);
+    Tile* orange4Star = new Tile(ORANGE, STAR_4);
+    Tile* yellowDiamond = new Tile(YELLOW, DIAMOND);
+    Tile* green6Star = new Tile(GREEN, SQUARE);
+    Tile* blueSquare = new Tile(BLUE, STAR_6);
+    Tile* purpleClover = new Tile(PURPLE, CLOVER);
+    std::cout << "New Tile 1 Created: Red Circle: " << redCircle->getTileColour() << redCircle->getTileShape()<< std::endl;
+    std::cout << "New Tile 2 Created: Orange 4 Star: " << orange4Star->getTileColour() << orange4Star->getTileShape()<< std::endl;
+    std::cout << "New Tile 3 Created: Yellow Diamon: " << yellowDiamond->getTileColour() << yellowDiamond->getTileShape()<< std::endl;
+    std::cout << "New Tile 4 Created: Green 6 Star: " << green6Star->getTileColour() << green6Star->getTileShape()<< std::endl;
+    std::cout << "New Tile 5 Created: Blue  Square: " << blueSquare->getTileColour() << blueSquare->getTileShape()<< std::endl;
+    std::cout << "New Tile 6 Created: Purple Clover: " << purpleClover->getTileColour() << purpleClover->getTileShape()<< std::endl;
+    // memory clean up
+    delete redCircle;
+    delete orange4Star;
+    delete yellowDiamond;
+    delete green6Star;
+    delete blueSquare;
+    delete purpleClover;
     
 
    return EXIT_SUCCESS;
