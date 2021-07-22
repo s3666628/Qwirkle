@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 
-
 using std::cin;
 using std::cout;
 using std::endl;
@@ -24,19 +23,18 @@ using std::vector;
 
 class Credits {
 public:
+  Credits(int value);
+  // Copy constructor
+  Credits(Credits &other);
+  // Move constructor
+  Credits(Credits &&other);
+  // Deconstructor
+  ~Credits();
 
-   Credits();
-   ~Credits();
-   
 private:
-   Credits* head;
-
-       
+  Credits *head;
 };
 
 int printCredits();
-
-
-
 
 #endif // ASSIGN2_CREDITS_H

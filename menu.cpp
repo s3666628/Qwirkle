@@ -14,8 +14,8 @@
 #include <string>
 #include <vector>
 
-#include "menu.h"
 #include "credits.h"
+#include "menu.h"
 
 using std::cin;
 using std::cout;
@@ -33,19 +33,23 @@ using std::vector;
 #define MAX_TILES_IN_BAG 106
 #define MAX_TILES_TO_START 6
 
-
 int mainMenu() {
   // Declaring Vector of String type
   // Values can be added here using initialise-list syntax
-  vector<std::string> menuList{"1.New Game", "2. Load Game", "3. Credits",
-                               "4. Quit"};
+  // vector<std::string> menuList{"1. New Game", "2. Load Game", "3. Credits",
+  //                              "4. Quit"};
 
   // Strings can be added at any time with push_back
-  menuList.push_back("Add More");
+  //Should this way be used from a memory usage point of view?
+  // Or is line 39 better?
+  vector<std::string> menuList{"1.New Game"};
+  menuList.push_back(std::move("2. Load Game"));
+  menuList.push_back(std::move("3. Credits"));
+  menuList.push_back(std::move("4. Quit")); 
 
   // Print Strings stored in Vector
-  for (int i = 0; i < (int)menuList.size(); ++i)
-    cout << menuList[i] << "\n";
+  /* for (int i = 0; i < (int)menuList.size(); ++i)
+    cout << menuList[i] << endl; */
   //}
   // int mainMenu() {
   cout << "Menu" << endl;
@@ -71,18 +75,22 @@ void start(){
 void newGame() {
   string player1 = "";
   string player2 = "";
-  cout << "Starting a New Game" << endl;
+  vector<std::string> gameList{
+      "Starting a New Game",
+      "Enter a name for player 1 (uppercase characters only)",
+      "Enter a name for player 2 (uppercase characters only)", "Let's Play!"};
+
+  // Print Strings stored in Vector
+  cout << gameList[0] << endl;
   cout << " " << endl;
-  cout << "Enter a name for player 1 (uppercase characters only)" << endl;
+  cout << gameList[1] << endl;
   cin >> player1;
   cout << " " << endl;
-  cout << "Enter a name for player 2 (uppercase characters only)" << endl;
+  cout << gameList[2] << endl;
   cin >> player2;
-  cout << " Let's Play!" << endl;
+  cout << gameList[3] << endl;
   cout << " " << endl;
 };
-
-
 
 int main() {
   int selected = -1;
@@ -91,6 +99,7 @@ int main() {
       cout << "Sorry, that's not a valid choice." << endl;
     } else if (selected == 1) {
       cout << "Starting a New Game" << endl;
+      cout << "-------------------" << endl;
       newGame();
     } else if (selected == 2) {
       cout << "Enter the filename from which to load a game" << endl;
@@ -108,3 +117,26 @@ int main() {
 
   return 0;
 }
+int length = 0;
+Menu::Menu(){
+    
+}
+Menu::~Menu(){
+    clear();
+}
+/**
+* Return the current size of the Deck.
+*/
+int Menu::size(){
+    return length;
+}
+/**
+* Removes all cards from the deck.
+* Delete these card
+*/
+void Menu::clear(){
+    for (int i = 0; i != length; ++i) {
+      delete menuList[i];
+      menuList[i] = nullptr;
+   }
+} 
