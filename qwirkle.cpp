@@ -9,8 +9,7 @@
 #define EXIT_SUCCESS    0
 
 int main(void) {
-   LinkedList* list = new LinkedList();
-   delete list;
+
 
    std::cout << "TODO: Implement Qwirkle soon!!" << std::endl;
     //Student Testing - can move this test somewhere else when the time comes
@@ -51,6 +50,15 @@ int main(void) {
     delete green6Star;
     delete blueSquare;
     delete purpleClover;
+    // testing new Linked List
+   LinkedList* list = new LinkedList();
+    Tile* purpleDiamond = new Tile(PURPLE, DIAMOND);
+    Tile* orangeDiamond = new Tile(ORANGE, DIAMOND);
+    list->addFront(purpleDiamond);
+    list->addFront(orangeDiamond);
+    list->printNodes();
+   delete list;
+
     
 
    return EXIT_SUCCESS;
