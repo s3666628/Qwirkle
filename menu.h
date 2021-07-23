@@ -27,14 +27,6 @@
 #define BLUE_BACKGROUND "\033[44m"
 #define MAGENTA_BACKGROUND "\033[45m"
 
-
-// template <typename T> class Menu {
-// // public:
-// //   Menu() {
-// //     // allocate 2 elements
-// //     ReAllocate(2);
-// //   }
-
 class Menu {
 public:
   Menu();
@@ -55,7 +47,6 @@ public:
   void remove(int index);
   void clear();
 
-
 private:
   Menu *colour;
   int *number;
@@ -66,7 +57,5 @@ private:
   // capture how much memory is allocated
   size_t m_Capacity = 0;
 };
-
-// };
 
 #endif // ASSIGN2_MENU_H

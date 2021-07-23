@@ -1,6 +1,8 @@
 #ifndef ASSIGN2_CREDITS_H
 #define ASSIGN2_CREDITS_H
 
+int printCredits();
+
 class Credits {
 public:
   Credits(int value);
@@ -14,7 +16,5 @@ public:
 private:
   Credits *head;
 };
-
-int printCredits();
 
 #endif // ASSIGN2_CREDITS_H

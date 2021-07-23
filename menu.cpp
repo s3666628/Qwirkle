@@ -47,11 +47,11 @@ int mainMenu() {
   // Print Strings stored in Vector
   // The Menu is coloured only for testing purposes
   // We can use this for loop instead of the colours
-   /* std::cout << "Menu" << std::endl;
-  std::cout << "----" << std::endl;
-  for (size_t i = 0; i < menuList.size(); ++i) {
-      std::cout << menuList[i] << std::endl;
-    }  */
+  /* std::cout << "Menu" << std::endl;
+ std::cout << "----" << std::endl;
+ for (size_t i = 0; i < menuList.size(); ++i) {
+     std::cout << menuList[i] << std::endl;
+   }  */
 
   std::cout << CYAN << "Menu" << std::endl;
   std::cout << "----" << std::endl;
@@ -66,8 +66,8 @@ int mainMenu() {
   if (std::stringstream(input) >> selected) {
     return selected;
   } else {
-    // This return 0; adds a -1 to the end of the Credits if you select 3 from the menu list.
-    // Not sure why or how to make it disappear.
+    // I think this return 0; adds a 0 to the end of the Credits if you select 3
+    // from the menu list. Not sure why or how to make it disappear.
     return 0;
   }
 };
@@ -85,8 +85,7 @@ void newGame() {
   std::vector<std::string> gameList{
       "Starting a New Game",
       "Enter a name for player 1 (uppercase characters only)",
-      "Enter a name for player 2 (uppercase characters only)", 
-      "Let's Play!"};
+      "Enter a name for player 2 (uppercase characters only)", "Let's Play!"};
 
   // Print Strings stored in Vector
   std::cout << gameList[0] << std::endl;
@@ -95,9 +94,9 @@ void newGame() {
   std::cin >> player1;
   // this will convert the user input to uppercase
   // I'm not sure about casting it as an int though.
-  for (int i = 0; i <  (int)player1.size(); ++i) {
+  for (int i = 0; i < (int)player1.size(); ++i) {
     player1[i] = toupper(player1[i]);
-    }
+  }
   std::cout << " " << std::endl;
   std::cout << gameList[2] << std::endl;
   std::cin >> player2;
@@ -105,7 +104,7 @@ void newGame() {
   // I'm not sure about casting it as an int though.
   for (int i = 0; i < (int)player2.size(); ++i) {
     player2[i] = toupper(player2[i]);
-    }
+  }
   std::cout << gameList[3] << std::endl;
   std::cout << " " << std::endl;
 };
