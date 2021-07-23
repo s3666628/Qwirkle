@@ -19,5 +19,5 @@ int printCredits() {
       putchar(c);
     fclose(credits);
   }
-  return 0;
+  return c;
 };

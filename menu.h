@@ -1,6 +1,8 @@
 #ifndef ASSIGN2_MENU_H
 #define ASSIGN2_MENU_H
 
+#include <vector>
+
 // Sources to make Terminal Colours
 // https://stackoverflow.com/questions/9158150/colored-output-in-c
 // https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a
@@ -25,11 +27,13 @@
 #define BLUE_BACKGROUND "\033[44m"
 #define MAGENTA_BACKGROUND "\033[45m"
 
-// ----------------------------------------------------------------
-// enum Colour {
-//     // Resets everything back to the standard colour.
-//     RESET = '\033[0m'
-// };
+
+// template <typename T> class Menu {
+// // public:
+// //   Menu() {
+// //     // allocate 2 elements
+// //     ReAllocate(2);
+// //   }
 
 class Menu {
 public:
@@ -56,6 +60,13 @@ private:
   Menu *colour;
   int *number;
   std::vector<Menu*> menuList;
+
+  // capture the number of elements inside the Vector
+  size_t m_Size = 0;
+  // capture how much memory is allocated
+  size_t m_Capacity = 0;
 };
+
+// };
 
 #endif // ASSIGN2_MENU_H

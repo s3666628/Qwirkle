@@ -17,6 +17,7 @@ void PrintVector(const Vector<T> &vector) {
 
 struct Menu_Item {
     std::string Items;
+    // vector<std::string> Items{"1. New Game", "2. Load Game", "3. Credits", "4. Quit"};
     // float x = 0.0f, y = 0.0f, z = 0.0f;
 
     Menu_Item() {}
