@@ -26,9 +26,6 @@ void Menu::clear() {
     menuList[i] = nullptr;
   }
 }
-// There chars add the User Prompt after the menu (Section 2.4)
-char g = '>';
-char s = ' ';
 
 int mainMenu() {
   // Reference:
@@ -61,7 +58,7 @@ int mainMenu() {
   std::cout << YELLOW_BACKGROUND << menuList[1] << RESET << std::endl;
   std::cout << BLUE << menuList[2] << RESET << std::endl;
   std::cout << RED_BACKGROUND << menuList[3] << RESET << std::endl;
-  std::cout << g << s;
+  std::cout << SIGN << SPACE;
 
   int selected = 0;
   std::string input;

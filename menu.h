@@ -27,6 +27,10 @@
 #define BLUE_BACKGROUND "\033[44m"
 #define MAGENTA_BACKGROUND "\033[45m"
 
+// These chars add the User Prompt after the menu (Section 2.4)
+#define SIGN char('>')
+#define SPACE char(' ')
+
 class Menu {
 public:
   Menu();
