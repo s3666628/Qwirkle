@@ -9,8 +9,8 @@
 #define EXIT_SUCCESS    0
 
 int main(void) {
-
-
+   std::cout << "Welcome to Qwirkle!" << std::endl;
+   std::cout << "-------------------" << std::endl;
    std::cout << "TODO: Implement Qwirkle soon!!" << std::endl;
     //Student Testing - can move this test somewhere else when the time comes
     // testing that we can create a new student
@@ -58,8 +58,6 @@ int main(void) {
     list->addFront(orangeDiamond);
     list->printNodes();
    delete list;
-
-    
 
    return EXIT_SUCCESS;
 }
