@@ -27,8 +27,6 @@
 #define BLUE_BACKGROUND "\033[44m"
 #define MAGENTA_BACKGROUND "\033[45m"
 
-#define CURSOR "\[>5m"
-
 class Menu {
 public:
   Menu();
