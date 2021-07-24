@@ -11,7 +11,8 @@
 int main(void) {
    LinkedList* list = new LinkedList();
    delete list;
-
+   std::cout << "Welcome to Qwirkle!" << std::endl;
+   std::cout << "-------------------" << std::endl;
    std::cout << "TODO: Implement Qwirkle soon!!" << std::endl;
     //Student Testing - can move this test somewhere else when the time comes
     // testing that we can create a new student
@@ -50,8 +51,7 @@ int main(void) {
     delete yellowDiamond;
     delete green6Star;
     delete blueSquare;
-    delete purpleClover;
-    
+    delete purpleClover;    
 
    return EXIT_SUCCESS;
 }
