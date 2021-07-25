@@ -42,19 +42,13 @@
 		F0678F3F26A3D0E6003DF380 /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = SOURCE_ROOT; };
 		F0678F4026A3D0E6003DF380 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = SOURCE_ROOT; };
 		F087AB2026ACE1730000709B /* credits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = credits.cpp; sourceTree = SOURCE_ROOT; };
-		F087AB2126ACE1740000709B /* creditsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = creditsTest.h; sourceTree = SOURCE_ROOT; };
 		F087AB2226ACE1740000709B /* menuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = menuItem.h; sourceTree = SOURCE_ROOT; };
 		F087AB2326ACE1740000709B /* credits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = credits.h; sourceTree = SOURCE_ROOT; };
 		F087AB2426ACE1740000709B /* menu3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = menu3.cpp; sourceTree = SOURCE_ROOT; };
-		F087AB2526ACE1740000709B /* creditsTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = creditsTest.cpp; sourceTree = SOURCE_ROOT; };
 		F087AB2626ACE1740000709B /* menuItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = menuItem.cpp; sourceTree = SOURCE_ROOT; };
 		F087AB2726ACE1740000709B /* menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = menu.h; sourceTree = SOURCE_ROOT; };
-		F087AB2826ACE1740000709B /* menuTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = menuTest.cpp; sourceTree = SOURCE_ROOT; };
 		F087AB2926ACE1740000709B /* credits.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = credits.txt; sourceTree = SOURCE_ROOT; };
-		F087AB2A26ACE1740000709B /* menuTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = menuTest.h; sourceTree = SOURCE_ROOT; };
 		F087AB2B26ACE1740000709B /* menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = menu.cpp; sourceTree = SOURCE_ROOT; };
-		F087AB2C26ACE1DB0000709B /* LinkedListTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListTest.h; sourceTree = SOURCE_ROOT; };
-		F087AB2D26ACE1DB0000709B /* LinkedListTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTest.cpp; sourceTree = SOURCE_ROOT; };
 		F087AB2E26ACE1DB0000709B /* VectorTest */ = {isa = PBXFileReference; lastKnownFileType = text; path = VectorTest; sourceTree = SOURCE_ROOT; };
 		F087AB3126ACE4AA0000709B /* Test_Obj_Creation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test_Obj_Creation.cpp; sourceTree = "<group>"; };
 		F087AB3226ACE4AA0000709B /* Test_Obj_Creation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test_Obj_Creation.h; sourceTree = "<group>"; };
@@ -92,21 +86,15 @@
 			children = (
 				F087AB3026ACE4600000709B /* UnitTesting */,
 				F020808F26A0351E00B05E39 /* LinkedList.cpp */,
-				F087AB2D26ACE1DB0000709B /* LinkedListTest.cpp */,
-				F087AB2C26ACE1DB0000709B /* LinkedListTest.h */,
 				F087AB2E26ACE1DB0000709B /* VectorTest */,
 				F087AB2026ACE1730000709B /* credits.cpp */,
 				F087AB2326ACE1740000709B /* credits.h */,
 				F087AB2926ACE1740000709B /* credits.txt */,
-				F087AB2526ACE1740000709B /* creditsTest.cpp */,
-				F087AB2126ACE1740000709B /* creditsTest.h */,
 				F087AB2B26ACE1740000709B /* menu.cpp */,
 				F087AB2726ACE1740000709B /* menu.h */,
 				F087AB2426ACE1740000709B /* menu3.cpp */,
 				F087AB2626ACE1740000709B /* menuItem.cpp */,
 				F087AB2226ACE1740000709B /* menuItem.h */,
-				F087AB2826ACE1740000709B /* menuTest.cpp */,
-				F087AB2A26ACE1740000709B /* menuTest.h */,
 				F020809426A0351F00B05E39 /* LinkedList.h */,
 				F020809026A0351E00B05E39 /* Makefile */,
 				F020809126A0351E00B05E39 /* Node.cpp */,
