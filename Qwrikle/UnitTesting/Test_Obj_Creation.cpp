@@ -40,11 +40,37 @@ void testTileCreation(){
 void testLinkedListCreation(){
     // testing the creation of a new tile
     LinkedList* list = new LinkedList();
+    list->removeFront();
+    std::cout << "Size of the list at start of testing is: " << list->listSize() << std::endl;
      Tile* purpleDiamond = new Tile(PURPLE, DIAMOND);
      Tile* orangeDiamond = new Tile(ORANGE, DIAMOND);
-     list->addFront(purpleDiamond);
-     list->addFront(orangeDiamond);
+     Tile* redSquare = new Tile(RED, SQUARE);
+    std::cout << "Size of the Linked list is: " << list->listSize() << std::endl;
+     std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
+     list->addBack(purpleDiamond);
+    std::cout << "Size of the Linked list is: " << list->listSize() << std::endl;
      list->printNodes();
+     std::cout << "Add Node to the Front and then Print out the Linked List " << std::endl;
+     list->addFront(orangeDiamond);
+    std::cout << "Size of the Linked list is: " << list->listSize() << std::endl;
+     list->printNodes();
+    std::cout << "Add Node to the Front Again and then Print out the Linked List " << std::endl;
+    list->addFront(redSquare);
+    std::cout << "Size of the Linked list is: " << list->listSize() << std::endl;
+    list->printNodes();
+    std::cout << "Remove Node From the Front and then Print out the Linked List " << std::endl;
+    list->removeFront();
+    std::cout << "Size of the Linked list is: " << list->listSize() << std::endl;
+    list->printNodes();
+
+//     list->addBack(redSquare);
+//     list->addFront(redSquare);
+//     list->printNodes();
+    std::cout << "Get details of tiles in zero position in the Linked List: " << list->listSize() << std::endl;
+    Tile tileAtZero = list->get(0);
+    std::cout << "Colour of the tile: " << tileAtZero.getTileColour() << std::endl;
+    std::cout << "Shape of the tile: " << tileAtZero.getTileShape() << std::endl;
+    
     delete list;
 }
 void testStudentCreation(){

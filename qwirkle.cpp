@@ -13,9 +13,10 @@ int main(void) {
    std::cout << "Welcome to Qwirkle!" << std::endl;
    std::cout << "-------------------" << std::endl;
 
+    testStudentCreation();
     testTileCreation();
     testLinkedListCreation();
-    testStudentCreation();
+
 
 
    return EXIT_SUCCESS;
