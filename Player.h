@@ -1,3 +1,5 @@
+// s3831786 Gordon Richard - RMIT
+
 #include "LinkedList.h"
 
 #include <string>
@@ -15,8 +17,10 @@ public:
     Player(std::string name, LinkedList *hand);
 
     ~Player();
-
-    std::string *getPlayerName();
+    // to return name stored in string type
+    std::string getPlayerName();
+    // to return memory address of string name
+    std::string *getPlayerNamePtr();
 
     void setPlayerScore(int score);
 
@@ -26,5 +30,9 @@ public:
 
     LinkedList *getPlayerHand();
 
-    int *getPlayerScore();
+    // to return player score stored in int type
+    int getPlayerScore();
+
+    // to return memory address of player score
+    int *getPlayerScorePtr();
 };

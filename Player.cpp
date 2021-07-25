@@ -1,6 +1,8 @@
-#include "Player.h";
+// s3831786 Gordon Richard - RMIT
 
-using namespace std; // I need to read up if we are allowed to use this for this assignment or not?
+#include "Player.h"
+
+using namespace std;
 
 Player::Player(std::string name)
 {
@@ -37,13 +39,24 @@ LinkedList *Player::getPlayerHand()
     return hand;
 }
 
-int *Player::getPlayerScore()
+int *Player::getPlayerScorePtr()
 {
     int *scorePtr = &score;
     return scorePtr;
 }
 
-string *Player::getPlayerName()
+int Player::getPlayerScore()
+{
+
+    return score;
+}
+
+string Player::getPlayerName()
+{
+
+    return name;
+}
+string *Player::getPlayerNamePtr()
 {
     string *namePtr = &name;
     return namePtr;
