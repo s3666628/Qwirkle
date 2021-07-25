@@ -11,6 +11,7 @@
 		F020809726A0351F00B05E39 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020808D26A0351E00B05E39 /* Tile.cpp */; };
 		F020809826A0351F00B05E39 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020808F26A0351E00B05E39 /* LinkedList.cpp */; };
 		F020809926A0351F00B05E39 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F020809126A0351E00B05E39 /* Node.cpp */; };
+		F0678F4126A3D0E6003DF380 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0678F3F26A3D0E6003DF380 /* Student.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		F020809326A0351F00B05E39 /* TileCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCodes.h; sourceTree = SOURCE_ROOT; };
 		F020809426A0351F00B05E39 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = SOURCE_ROOT; };
 		F020809526A0351F00B05E39 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = SOURCE_ROOT; };
+		F0678F3F26A3D0E6003DF380 /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = SOURCE_ROOT; };
+		F0678F4026A3D0E6003DF380 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				F020808D26A0351E00B05E39 /* Tile.cpp */,
 				F020809526A0351F00B05E39 /* Tile.h */,
 				F020809326A0351F00B05E39 /* TileCodes.h */,
+				F0678F3F26A3D0E6003DF380 /* Student.cpp */,
+				F0678F4026A3D0E6003DF380 /* Student.h */,
 			);
 			path = Qwrikle;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				F020809726A0351F00B05E39 /* Tile.cpp in Sources */,
 				F020809826A0351F00B05E39 /* LinkedList.cpp in Sources */,
 				F020809626A0351F00B05E39 /* qwirkle.cpp in Sources */,
+				F0678F4126A3D0E6003DF380 /* Student.cpp in Sources */,
 				F020809926A0351F00B05E39 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
