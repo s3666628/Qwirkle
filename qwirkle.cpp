@@ -1,22 +1,26 @@
 
-#include "LinkedList.h"
+// #include "LinkedList.h"
 
 #include <iostream>
-#include "Student.h"
+/* #include "Student.h"
 #include "Tile.h"
-#include "TileCodes.h"
+#include "TileCodes.h" */
+#include "menu.h"
+#include "credits.h"
 
-#define EXIT_SUCCESS    0
+// #define EXIT_SUCCESS    0
+
+void selectionMenu();
 
 int main(void) {
-   LinkedList* list = new LinkedList();
-   delete list;
+/*    LinkedList* list = new LinkedList();
+   delete list; */
    std::cout << "Welcome to Qwirkle!" << std::endl;
    std::cout << "-------------------" << std::endl;
-   std::cout << "TODO: Implement Qwirkle soon!!" << std::endl;
+   selectionMenu();
     //Student Testing - can move this test somewhere else when the time comes
     // testing that we can create a new student
-    std::cout << "Creating a new Test Student 01" << std::endl;
+    /* std::cout << "Creating a new Test Student 01" << std::endl;
     Student* phil = new Student("Philip Beeby", "S3666628", "s3666628@student.rmit.edu.au");
     std::cout << "Printing out Test Student 01 -  name: " << phil->getName() << std::endl;
     std::cout << "Printing out Test Student 01 -  StudentID: " << phil->getstudentID()<< std::endl;
@@ -41,7 +45,7 @@ int main(void) {
     Tile* purpleClover = new Tile(PURPLE, CLOVER);
     std::cout << "New Tile 1 Created: Red Circle: " << redCircle->getTileColour() << redCircle->getTileShape()<< std::endl;
     std::cout << "New Tile 2 Created: Orange 4 Star: " << orange4Star->getTileColour() << orange4Star->getTileShape()<< std::endl;
-    std::cout << "New Tile 3 Created: Yellow Diamon: " << yellowDiamond->getTileColour() << yellowDiamond->getTileShape()<< std::endl;
+    std::cout << "New Tile 3 Created: Yellow Diamond: " << yellowDiamond->getTileColour() << yellowDiamond->getTileShape()<< std::endl;
     std::cout << "New Tile 4 Created: Green 6 Star: " << green6Star->getTileColour() << green6Star->getTileShape()<< std::endl;
     std::cout << "New Tile 5 Created: Blue  Square: " << blueSquare->getTileColour() << blueSquare->getTileShape()<< std::endl;
     std::cout << "New Tile 6 Created: Purple Clover: " << purpleClover->getTileColour() << purpleClover->getTileShape()<< std::endl;
@@ -51,7 +55,7 @@ int main(void) {
     delete yellowDiamond;
     delete green6Star;
     delete blueSquare;
-    delete purpleClover;    
+    delete purpleClover;     
 
-   return EXIT_SUCCESS;
+   return EXIT_SUCCESS;*/
 }

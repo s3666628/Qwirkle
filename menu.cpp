@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <string>
 #include <vector>
 
 #include "credits.h"
@@ -27,37 +28,31 @@ void Menu::clear() {
   }
 }
 
+// Quits the entire program
+void Menu::quit() {
+  std::string quit = "Goodbye!";
+  std::cout << quit << std::endl;
+  exit(1);
+}
+
 int mainMenu() {
   // Reference:
   // https://stackoverflow.com/questions/60616203/how-can-i-make-a-function-that-prints-out-a-menu
   // Declaring Vector of String type
-  // Values can be added here using initialise-list syntax
-  // std::vector<std::string> menuList{"1. New Game", "2. Load Game", "3.
-  // Credits",
-  //                              "4. Quit"};
-
   // Strings can be added at any time with emplace_back
-  // Should this way be used from a memory usage point of view?
-  // Or is line 39 better?
-  std::vector<std::string> menuList{"1.New Game"};
+  std::vector<std::string> menuList;
+  menuList.reserve(4);
+  menuList.emplace_back(std::move("1. New Game"));
   menuList.emplace_back(std::move("2. Load Game"));
   menuList.emplace_back(std::move("3. Credits"));
   menuList.emplace_back(std::move("4. Quit"));
 
   // Print Strings stored in Vector
-  // The Menu is coloured only for testing purposes
-  // We can use this for loop instead of the colours
-  /* std::cout << "Menu" << std::endl;
- std::cout << "----" << std::endl;
- for (size_t i = 0; i < menuList.size(); ++i) {
-     std::cout << menuList[i] << std::endl;
-   }  */
-  std::cout << CYAN << "Menu" << std::endl;
+  std::cout << "Menu" << std::endl;
   std::cout << "----" << std::endl;
-  std::cout << GREEN << menuList[0] << RESET << std::endl;
-  std::cout << YELLOW_BACKGROUND << menuList[1] << RESET << std::endl;
-  std::cout << BLUE << menuList[2] << RESET << std::endl;
-  std::cout << RED_BACKGROUND << menuList[3] << RESET << std::endl;
+  for (std::string &value : menuList) {
+    std::cout << value << std::endl;
+  }
   std::cout << SIGN << SPACE;
 
   int selected = 0;
@@ -66,15 +61,8 @@ int mainMenu() {
   if (std::stringstream(input) >> selected) {
     return selected;
   } else {
-    // I think this return 0; adds a 0 to the end of the Credits if you select 3
-    // from the menu list. Not sure why or how to make it disappear.
-    return 0;
+    return EXIT_SUCCESS;
   }
-};
-
-// this function will redisplay the menu until 4 Quit is selected
-void start(){
-
 };
 
 void newGame() {
@@ -82,13 +70,15 @@ void newGame() {
   // They should come from the Player files
   std::string player1 = "";
   std::string player2 = "";
-  std::vector<std::string> gameList{
-      "Starting a New Game",
-      "Enter a name for player 1 (uppercase characters only)",
-      "Enter a name for player 2 (uppercase characters only)", "Let's Play!"};
+  std::vector<std::string> gameList;
+  gameList.emplace_back(std::move("Starting a New Game"));
+  gameList.emplace_back(
+      std::move("Enter a name for player 1 (uppercase characters only)"));
+  gameList.emplace_back(
+      std::move("Enter a name for player 2 (uppercase characters only)"));
+  gameList.emplace_back(std::move("Let's Play!"));
 
   // Print Strings stored in Vector
-  std::cout << gameList[0] << std::endl;
   std::cout << " " << std::endl;
   std::cout << gameList[1] << std::endl;
   std::cin >> player1;
@@ -109,12 +99,12 @@ void newGame() {
   std::cout << " " << std::endl;
 };
 
-int main() {
+void selectionMenu() {
+  Menu quit;
   int selected = -1;
-  while ((selected = mainMenu()) != 4) {
-    if (selected < 1 || selected > 4) {
-      std::cout << "Sorry, that's not a valid choice." << std::endl;
-    } else if (selected == 1) {
+
+  while ((selected = mainMenu()) <= 4 && !std::cin.eof()) {
+    if (selected == 1) {
       std::cout << "Starting a New Game" << std::endl;
       std::cout << "-------------------" << std::endl;
       newGame();
@@ -124,12 +114,11 @@ int main() {
       std::cout << "The Team!" << std::endl;
       std::cout << printCredits() << std::endl;
     } else if (selected == 4) {
-      std::cout << "Quit" << std::endl;
-      // this function will redisplay the menu until 4 Quit is selected
-      start();
+      std::cout << " " << std::endl;
+      quit.quit();
     } else {
-      std::cout << "Sorry, that's not a valid choice." << std::endl;
+      std::cout << " " << std::endl;
+      std::cout << "Invalid Input" << std::endl;
     }
   }
-  return 0;
-}
+};

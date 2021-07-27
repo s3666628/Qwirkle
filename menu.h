@@ -44,12 +44,15 @@ public:
   Menu getMenuList();
   int getNumber();
   int size();
+  int mainMenu();
 
   Menu* get(int index);
+  void selectionMenu();
   void add(Menu* menuList);
   void add(Menu* menuList, int index);
   void remove(int index);
   void clear();
+  void quit();
 
 private:
   Menu *colour;
