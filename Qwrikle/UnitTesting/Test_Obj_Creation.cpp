@@ -70,6 +70,31 @@ void testLinkedListCreation(){
     Tile tileAtZero = list->get(0);
     std::cout << "Colour of the tile: " << tileAtZero.getTileColour() << std::endl;
     std::cout << "Shape of the tile: " << tileAtZero.getTileShape() << std::endl;
+    std::cout << "Clearing the Linked List of all nodes: " << list->listSize() << std::endl;
+    list->clear();
+    std::cout << "Printing the list post clearing: " << list->listSize() << std::endl;
+    list->printNodes();
+    std::cout << "Adding purpleDiamond to the back: " << list->listSize() << std::endl;
+    list->addBack(purpleDiamond);
+    std::cout << "Adding redSquare to the front: " << list->listSize() << std::endl;
+    list->addFront(redSquare);
+    list->printNodes();
+    std::cout << "Removing purpleDiamond from the back: " << list->listSize() << std::endl;
+    list->removeBack();
+    list->printNodes();
+    std::cout << "Removing RedSquare from the back: " << list->listSize() << std::endl;
+    list->removeBack();
+    list->printNodes();
+    std::cout << "Removing from the back when list is Empty: " << list->listSize() << std::endl;
+    list->removeBack();
+    list->printNodes();
+    std::cout << "Adding purpleDiamond to the back: " << list->listSize() << std::endl;
+    list->addBack(purpleDiamond);
+    list->printNodes();
+    std::cout << "Removing from the back when list has ONE element: " << list->listSize() << std::endl;
+    list->removeBack();
+    list->printNodes();
+
     
     delete list;
 }
