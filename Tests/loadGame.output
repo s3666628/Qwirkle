@@ -1,7 +1,3 @@
-Enter the filename from which load a game
-
-Qwirkle game successfully loaded
-
 Welcome to Qwirkle!
 -------------------
 Menu----
@@ -9,6 +5,10 @@ Menu----
 2. Load Game
 3. Credits (Show student information)
 4. Quit
+
+Enter the filename from which load a game
+
+Qwirkle game successfully loaded
 
 Let's Play!
 

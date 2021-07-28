@@ -7,6 +7,8 @@
 #include "TileCodes.h" */
 #include "menu.h"
 #include "credits.h"
+#include "TileCodes.h"
+#include "Test_Obj_Creation.h"
 
 // #define EXIT_SUCCESS    0
 
@@ -56,6 +58,14 @@ int main(void) {
     delete green6Star;
     delete blueSquare;
     delete purpleClover;     
+   std::cout << "Welcome to Qwirkle!" << std::endl;
+   std::cout << "-------------------" << std::endl;
+
+    testStudentCreation();
+    testTileCreation();
+    testLinkedListCreation();
+
+
 
    return EXIT_SUCCESS;*/
 }
