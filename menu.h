@@ -27,6 +27,10 @@
 #define BLUE_BACKGROUND "\033[44m"
 #define MAGENTA_BACKGROUND "\033[45m"
 
+// These chars add the User Prompt after the menu (Section 2.4)
+#define SIGN char('>')
+#define SPACE char(' ')
+
 class Menu {
 public:
   Menu();
@@ -40,12 +44,15 @@ public:
   Menu getMenuList();
   int getNumber();
   int size();
+  int mainMenu();
 
   Menu* get(int index);
+  void selectionMenu();
   void add(Menu* menuList);
   void add(Menu* menuList, int index);
   void remove(int index);
   void clear();
+  void quit();
 
 private:
   Menu *colour;

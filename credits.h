@@ -14,7 +14,7 @@ public:
   ~Credits();
 
 private:
-  Credits *head;
+  Credits *credits;
 };
 
 #endif // ASSIGN2_CREDITS_H
