@@ -129,7 +129,7 @@ unsigned int LinkedList::listSize() const
 Tile LinkedList::get(unsigned int index) const
 {
     
-    int count = 0;
+    unsigned int count = 0;
     Node *current = head;
     // need to make sure that value given is zero or greater
     // int returnValue = std::numeric_limits<int>::min();
