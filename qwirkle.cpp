@@ -2,24 +2,22 @@
 // #include "LinkedList.h"
 
 #include <iostream>
-/* #include "Student.h"
-#include "Tile.h"
-#include "TileCodes.h" */
 #include "menu.h"
 #include "credits.h"
-#include "TileCodes.h"
-#include "Test_Obj_Creation.h"
+/* #include "Student.h"
+#include "Tile.h"*/
+// #include "TileCodes.h"
+// #include "Test_Obj_Creation.h"
 
 // #define EXIT_SUCCESS    0
-
-void selectionMenu();
 
 int main(void) {
 /*    LinkedList* list = new LinkedList();
    delete list; */
+   Menu selectionMenu;
    std::cout << "Welcome to Qwirkle!" << std::endl;
    std::cout << "-------------------" << std::endl;
-   selectionMenu();
+   selectionMenu.selectionMenu();
     //Student Testing - can move this test somewhere else when the time comes
     // testing that we can create a new student
     /* std::cout << "Creating a new Test Student 01" << std::endl;
@@ -60,12 +58,9 @@ int main(void) {
     delete purpleClover;     
    std::cout << "Welcome to Qwirkle!" << std::endl;
    std::cout << "-------------------" << std::endl;
-
     testStudentCreation();
     testTileCreation();
     testLinkedListCreation();
-
-
-
-   return EXIT_SUCCESS;*/
+*/
+   return EXIT_SUCCESS;
 }
