@@ -47,7 +47,7 @@ public:
   int mainMenu();
 
   Menu* get(int index);
-  void selectionMenu();
+  // void selectionMenu();
   void add(Menu* menuList);
   void add(Menu* menuList, int index);
   void remove(int index);
