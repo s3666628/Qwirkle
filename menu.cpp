@@ -14,8 +14,10 @@
 #include "menu.h"
 
 int length = 0;
+
 Menu::Menu() {}
 Menu::~Menu() { clear(); }
+Credits::Credits() {}
 
 // Returns the current size of the Menu
 int Menu::size() { return length; }
@@ -35,7 +37,7 @@ void Menu::quit() {
   exit(1);
 }
 
-int mainMenu() {
+int Menu::mainMenu() {
   // Reference:
   // https://stackoverflow.com/questions/60616203/how-can-i-make-a-function-that-prints-out-a-menu
   // Declaring Vector of String type
@@ -65,7 +67,7 @@ int mainMenu() {
   }
 };
 
-void newGame() {
+void Menu::newGame() {
   // These are only initialised for testing purposes
   // They should come from the Player files
   std::string player1 = "";
@@ -99,23 +101,23 @@ void newGame() {
   std::cout << " " << std::endl;
 };
 
-void selectionMenu() {
-  Menu quit;
+void Menu::selectionMenu() {
+  Credits printCredits;
   int selected = -1;
 
-  while ((selected = mainMenu()) <= 4 && !std::cin.eof()) {
+  while ((selected = Menu::mainMenu()) <= 4 && !std::cin.eof()) {
     if (selected == 1) {
       std::cout << "Starting a New Game" << std::endl;
       std::cout << "-------------------" << std::endl;
-      newGame();
+      Menu::newGame();
     } else if (selected == 2) {
       std::cout << "Enter the filename from which to load a game" << std::endl;
     } else if (selected == 3) {
       std::cout << "The Team!" << std::endl;
-      std::cout << printCredits() << std::endl;
+      std::cout << printCredits.printCredits() << std::endl;
     } else if (selected == 4) {
       std::cout << " " << std::endl;
-      quit.quit();
+      Menu::quit();
     } else {
       std::cout << " " << std::endl;
       std::cout << "Invalid Input" << std::endl;

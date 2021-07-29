@@ -4,7 +4,9 @@
 #include "credits.h"
 #include "menu.h"
 
-int printCredits() {
+Credits::~Credits() {}
+
+int Credits::printCredits() {
   // Reference:
   // https://www.programiz.com/cpp-programming/library-function/cstdio/fopen
   int c;
