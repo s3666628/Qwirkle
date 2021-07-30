@@ -12,7 +12,7 @@ public:
     void switchPlayer();
     void startGameMsg();
     void runGame();
-    void gameStats();
+    void gamePlay();
 
     ~newGame();
 

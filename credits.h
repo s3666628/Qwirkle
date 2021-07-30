@@ -1,11 +1,9 @@
 #ifndef ASSIGN2_CREDITS_H
 #define ASSIGN2_CREDITS_H
 
-int printCredits();
-
 class Credits {
 public:
-  Credits(int value);
+  Credits();
   // Copy constructor
   Credits(Credits &other);
   // Move constructor
@@ -13,8 +11,10 @@ public:
   // Deconstructor
   ~Credits();
 
+  int printCredits();
+
 private:
-  Credits *head;
+  Credits *credits;
 };
 
 #endif // ASSIGN2_CREDITS_H
