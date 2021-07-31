@@ -1,9 +1,12 @@
 #include "newGame.h"
-#include "player.h"
+#include "Player.h"
 #include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
+
+Player p1("");
+Player p2("");
 
 newGame::newGame() 
 {
@@ -28,11 +31,12 @@ void newGame::addPlayers()
       std::move("Enter a name for player 1 (uppercase characters only)"));
   gameList.emplace_back(
       std::move("Enter a name for player 2 (uppercase characters only)"));
-  gameList.emplace_back(std::move("Let's Play!"));
+//   gameList.emplace_back(std::move("Let's Play!"));
 
   // Print Strings stored in Vector
   std::cout << " " << std::endl;
   std::cout << gameList[1] << std::endl;
+  std::cin >> player1;
   std::cin >> player1;
   // this will convert the user input to uppercase
   // I'm not sure about casting it as an int though.
@@ -85,9 +89,14 @@ void newGame::startGameMsg()
 
 void newGame::gamePlay()
 {
+    Player p1(playerNames[0]);
+    Player p2(playerNames[1]);
+    p1.setPlayerScore(0);
+    p2.setPlayerScore(0);
+
     std::cout << currentPlayer << ", it's your turn" << std::endl;
-    std::cout << "Score for " << playerNames[0] << ":" <<  std::endl; //input score here
-    std::cout << "Score for " << playerNames[1] << ":" << std::endl; //input score here
+    std::cout << "Score for " << playerNames[0] << ":" << p1.getPlayerScore() << std::endl; //input score here
+    std::cout << "Score for " << playerNames[1] << ":" << p2.getPlayerScore() << std::endl; //input score here
     //fetch board here
     //display current player hand here
 }

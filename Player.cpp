@@ -1,6 +1,6 @@
 // s3831786 Gordon Richard - RMIT
 
-#include "player.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -47,13 +47,11 @@ int *Player::getPlayerScorePtr()
 
 int Player::getPlayerScore()
 {
-
     return score;
 }
 
 string Player::getPlayerName()
 {
-
     return name;
 }
 string *Player::getPlayerNamePtr()

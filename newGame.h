@@ -20,4 +20,5 @@ private:
     std::string currentPlayer;
     std::string playerNames[2];
     int play;
+    std::string p1;
 };
