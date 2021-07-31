@@ -5,22 +5,15 @@
 #include <vector>
 #include <fstream>
 
-Player p1("");
-Player p2("");
-
 newGame::newGame() 
 {
 
 }
-
 newGame::~newGame()
 {
-
 }
-
 void newGame::addPlayers()
 {
-
       // These are only initialised for testing purposes
   // They should come from the Player files
   std::string player1 = "";
@@ -64,9 +57,8 @@ void newGame::addPlayers()
 std::string newGame::getCurrentPlayer()
 {
     return currentPlayer;
-
 }
-
+//call funtion switch player two switch between current player
 void newGame::switchPlayer()
 {
     if (play == 0)
@@ -93,7 +85,7 @@ void newGame::gamePlay()
     Player p2(playerNames[1]);
     p1.setPlayerScore(0);
     p2.setPlayerScore(0);
-
+    
     std::cout << currentPlayer << ", it's your turn" << std::endl;
     std::cout << "Score for " << playerNames[0] << ":" << p1.getPlayerScore() << std::endl; //input score here
     std::cout << "Score for " << playerNames[1] << ":" << p2.getPlayerScore() << std::endl; //input score here
@@ -105,6 +97,13 @@ void newGame::runGame()
 {
     addPlayers();
     startGameMsg();
+    //loop and check if game should continue
     gamePlay();
+    // update game stats
+}
+
+void gamePlayAlgo()
+{
+
 }
 

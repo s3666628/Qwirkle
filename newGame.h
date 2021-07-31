@@ -13,6 +13,7 @@ public:
     void startGameMsg();
     void runGame();
     void gamePlay();
+    void gamePlayAlgo();
 
     ~newGame();
 
