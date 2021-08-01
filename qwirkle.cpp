@@ -1,20 +1,14 @@
 // #include "LinkedList.h"
 
 #include <iostream>
-
 #include "menu.h"
-
 #include "credits.h"
-
 #include "Tile.h"
-
 #include "TileCodes.h"
-
 #include "Student.h"
-
 #include "LinkedList.h"
-
 #include "Bag.h"
+#include "Player.h"
 
 #define MAX_BAG_TILES 108
 
@@ -23,7 +17,8 @@
 void testTileCreation();
 void testLinkedListCreation();
 void testStudentCreation();
-// void testBagCreation();
+void playerTest();
+
 
 int main(void) {
   Menu selectionMenu;
@@ -44,6 +39,7 @@ int main(void) {
      testTileCreation();
      testStudentCreation();
      testLinkedListCreation();
+     playerTest();
 // END tests
 
   selectionMenu.selectionMenu();
@@ -157,4 +153,28 @@ void testLinkedListCreation() {
   list -> printNodes();
 
   delete list;
+}
+
+// test function for the player object - Gordon Richard s3831786
+void playerTest()
+{
+
+    std::cout << "Begin test of get methods" << std::endl;
+
+    // test - creating new Player object and passing a string to act as playerName ( todo: implement function Player-> getPlayerName)
+    Player *testPlayer = new Player("Banana");
+    std::cout << "The players name: " << testPlayer->getPlayerName() << std::endl;
+    // test - printing out the score value
+    std::cout << "Current score: " << testPlayer->getPlayerScore() << std::endl;
+    // test - printing the player's hand
+    std::cout << "The player's hand: " << testPlayer->getPlayerHand() << std::endl;
+    std::cout << "Begin test of set methods" << std::endl;
+    // test - setting playerScore
+    testPlayer->setPlayerScore(999);
+    std::cout << "Current score after setting (expect 999): " << testPlayer->getPlayerScore() << std::endl;
+    //incrementing the score by the value 2
+    testPlayer->addPlayerScore(2);
+    std::cout << ("New score after adding 2 points (expect 1001): ") << testPlayer->getPlayerScore() << std::endl;
+
+    delete testPlayer;
 }
