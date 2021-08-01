@@ -1,6 +1,6 @@
 
-#ifndef ASSIGN1_TILECODES_H
-#define ASSIGN1_TILECODES_H
+#ifndef ASSIGN2_TILECODES_H
+#define ASSIGN2_TILECODES_H
 
 // // Colours
 // #define RED    'R'
@@ -36,4 +36,4 @@ enum Shapes {
     CLOVER = 6
 };
 
-#endif // ASSIGN1_TILECODES_H
+#endif // ASSIGN2_TILECODES_H
