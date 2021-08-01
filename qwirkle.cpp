@@ -8,21 +8,51 @@
 #include "TileCodes.h"
 #include "Student.h"
 #include "LinkedList.h"
+#include "Bag.h"
+#define MAX_BAG_TILES 108
+
 // #define EXIT_SUCCESS    0
 
 void testTileCreation();
 void testLinkedListCreation();
 void testStudentCreation();
+// void testBagCreation();
 
 int main(void) {
   Menu selectionMenu;
    std::cout << "Welcome to Qwirkle!" << std::endl;
    std::cout << "-------------------" << std::endl;
    //run tests
-   testTileCreation();
-   testStudentCreation();
-   testLinkedListCreation();
-  selectionMenu.selectionMenu();
+
+
+    Bag* newBag = new Bag();
+    // newBag->addTilesToBag();
+
+    // int listSize = newBag->listSize();
+    // std::cout << "Bag Size" << listSize << std::endl;
+    // newBag->addTilesToBag();
+    Tile* redSquare = new Tile(RED, SQUARE);
+   
+    std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
+    newBag->addBack(redSquare);
+    std::cout << "Size of the Linked list is: " << newBag->listSize() << std::endl;
+    newBag->addTilesToBag(newBag);
+    newBag->printNodes();
+
+    // int counter = 0;
+    // while (counter < MAX_BAG_TILES){
+    //     newBag->addTilesToBag();
+    //     ++ counter;
+    // }
+    // newBag->printNodes();
+    // this-
+
+    delete newBag;
+  
+//    testTileCreation();
+//    testStudentCreation();
+//    testLinkedListCreation();
+   selectionMenu.selectionMenu();
 
 // these are tests so please un/comment as needed
 // need to include
@@ -142,3 +172,15 @@ void testLinkedListCreation(){
     
     delete list;
 }
+
+// void testBagCreation(){
+//     // testing the creation of a new tile
+//     std::cout << "Creating a new Tiles" << std::endl;
+//    //  std::cout << "Creating a new Tiles" << std::endl;
+//     Bag* newBag = new Bag();
+    
+//    //  std::cout << "New Tile 6 Created: Purple Clover: " << purpleClover->getTileColour() << purpleClover->getTileShape()<< std::endl;
+//     // memory clean up
+//     delete newBag;
+
+// }
