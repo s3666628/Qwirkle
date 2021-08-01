@@ -12,6 +12,10 @@ newGame::newGame()
 newGame::~newGame()
 {
 }
+
+Player p1("");
+Player p2("");
+
 void newGame::addPlayers()
 {
       // These are only initialised for testing purposes
@@ -81,8 +85,10 @@ void newGame::startGameMsg()
 
 void newGame::gamePlay()
 {
+    //assigning player names to p1 and p2
     Player p1(playerNames[0]);
     Player p2(playerNames[1]);
+    //seeting sores to 0 for p1 and p2
     p1.setPlayerScore(0);
     p2.setPlayerScore(0);
     
@@ -100,10 +106,29 @@ void newGame::runGame()
     //loop and check if game should continue
     gamePlay();
     // update game stats
+
+    saveGame();
 }
 
-void gamePlayAlgo()
+void newGame::saveGame()
 {
+
+    std::string fileName = "";
+    std::cout << "Enter name you wish to give to save game file" << std::endl;
+    std::cout << ">";
+    std::cin >> fileName;
+
+    std::ofstream MyWriteFile(fileName);
+    MyWriteFile << playerNames[0] << "\n";
+    MyWriteFile << p1.getPlayerScore() << "\n";
+    MyWriteFile << "Player 1 Hand goes here" << "\n";
+    MyWriteFile << playerNames[1] << "\n";
+    MyWriteFile << p2.getPlayerScore() << "\n";
+    MyWriteFile << "Player 2 hand goes here" << "\n";
+    MyWriteFile << "cuurent board state goes here" << "\n";
+    MyWriteFile << "Tile bag content goes here" << "\n";
+    MyWriteFile << getCurrentPlayer() << "\n";
+    MyWriteFile.close();
 
 }
 
