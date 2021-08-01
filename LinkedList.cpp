@@ -68,7 +68,7 @@ void LinkedList::removeFront()
     else
     {
         //create a temp node and assign it the head
-        // so now temp node annd head are the same
+        // so now temp node and head are the same
         // head is a pointer to the first node in the list that we want to remove
         Node *tmpNode = head;
         // move the head to point to the next node in the list
@@ -129,7 +129,7 @@ unsigned int LinkedList::listSize() const
 Tile LinkedList::get(unsigned int index) const
 {
     
-    int count = 0;
+    unsigned int count = 0;
     Node *current = head;
     // need to make sure that value given is zero or greater
     // int returnValue = std::numeric_limits<int>::min();
