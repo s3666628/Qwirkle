@@ -49,7 +49,7 @@ void testTileCreation(){
     Tile* purpleClover = new Tile(PURPLE, CLOVER);
     std::cout << "New Tile 1 Created: Red Circle: " << redCircle->getTileColour() << redCircle->getTileShape()<< std::endl;
     std::cout << "New Tile 2 Created: Orange 4 Star: " << orange4Star->getTileColour() << orange4Star->getTileShape()<< std::endl;
-    std::cout << "New Tile 3 Created: Yellow Diamond: " << yellowDiamond->getTileColour() << yellowDiamond->getTileShape()<< std::endl;
+    std::cout << "New Tile 3 Created: Yellow Diamon: " << yellowDiamond->getTileColour() << yellowDiamond->getTileShape()<< std::endl;
     std::cout << "New Tile 4 Created: Green 6 Star: " << green6Star->getTileColour() << green6Star->getTileShape()<< std::endl;
     std::cout << "New Tile 5 Created: Blue  Square: " << blueSquare->getTileColour() << blueSquare->getTileShape()<< std::endl;
     std::cout << "New Tile 6 Created: Purple Clover: " << purpleClover->getTileColour() << purpleClover->getTileShape()<< std::endl;
