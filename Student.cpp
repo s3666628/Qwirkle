@@ -1,6 +1,6 @@
 //
 //  Student.cpp
-//  Qwrikle
+//  Qwirkle
 //
 //  Created by Philip Beeby on 18/7/21.
 //
@@ -18,7 +18,7 @@ Student::Student(){
 }
 
 Student::Student(std::string name, std::string studentID,std::string email){
-    // contstuctor
+    // constructor
     std::cout << "Creating a new Student Object: " << std::endl;
     this->name = new std::string(name);
     this->studentID = new std::string(studentID);
