@@ -47,11 +47,13 @@ int *Player::getPlayerScorePtr()
 
 int Player::getPlayerScore()
 {
+
     return score;
 }
 
 string Player::getPlayerName()
 {
+
     return name;
 }
 string *Player::getPlayerNamePtr()

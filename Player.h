@@ -21,6 +21,7 @@ public:
     std::string getPlayerName();
     // to return memory address of string name
     std::string *getPlayerNamePtr();
+    bool setName(std::string &playerName);
 
     void setPlayerScore(int score);
 
