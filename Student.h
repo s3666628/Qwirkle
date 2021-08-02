@@ -1,6 +1,6 @@
 //
 //  Student.h
-//  Qwrikle
+//  Qwirkle
 //
 //  Created by Philip Beeby on 18/7/21.
 //
@@ -13,7 +13,7 @@
 class Student
 {
 public:
-    //defaul constructor
+    //default constructor
     Student();
     //constructor
     Student(std::string name, std::string studentID,std::string email);
