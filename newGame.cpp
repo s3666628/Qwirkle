@@ -129,6 +129,5 @@ void newGame::saveGame()
     MyWriteFile << "Tile bag content goes here" << "\n";
     MyWriteFile << getCurrentPlayer() << "\n";
     MyWriteFile.close();
-
 }
 
