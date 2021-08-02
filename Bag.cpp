@@ -9,7 +9,7 @@
 #include "TileCodes.h"
 #include <random>
 
-#define MAX_BAG_TILES 108
+#define MAX_BAG_TILES 72
 
 Bag::Bag() {
   // constructor for a new bag of tiles
