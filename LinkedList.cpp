@@ -122,6 +122,7 @@ Tile LinkedList::get(unsigned int index) const {
     while (count < index) {
       ++count;
       current = current->next;
+
     }
     returnValue = current->tile;
   } else {
