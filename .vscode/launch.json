@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
+            "name": "Qwirkle Game",
+            "type": "lldb",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "program": "qwirkle",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

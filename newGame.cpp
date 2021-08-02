@@ -18,39 +18,30 @@ Player p2("");
 
 void newGame::addPlayers()
 {
-      // These are only initialised for testing purposes
-  // They should come from the Player files
-  std::string player1 = "";
-  std::string player2 = "";
+  std::string player1;
+  std::string player2;
   std::vector<std::string> gameList;
-  gameList.emplace_back(std::move("Starting a New Game"));
-  gameList.emplace_back(
-      std::move("Enter a name for player 1 (uppercase characters only)"));
-  gameList.emplace_back(
-      std::move("Enter a name for player 2 (uppercase characters only)"));
-//   gameList.emplace_back(std::move("Let's Play!"));
+  gameList.emplace_back("Starting a New Game");
+  gameList.emplace_back("Enter a name for player 1 (uppercase characters only)");
+  gameList.emplace_back("Enter a name for player 2 (uppercase characters only)");
 
   // Print Strings stored in Vector
   std::cout << " " << std::endl;
   std::cout << gameList[1] << std::endl;
-  std::cin >> player1;
-  std::cin >> player1;
+  // WHY do we need the next line TWICE to make it work?????
+  std::getline (std::cin, player1);
+  std::getline (std::cin, player1);
   // this will convert the user input to uppercase
-  // I'm not sure about casting it as an int though.
-  for (int i = 0; i < (int)player1.size(); ++i) {
+    for (int i = 0; i < (int)player1.size(); ++i) {
     player1[i] = toupper(player1[i]);
   }
   std::cout << " " << std::endl;
   std::cout << gameList[2] << std::endl;
-  std::cin >> player2;
+  std::getline (std::cin, player2);
   // this will convert the user input to uppercase
-  // I'm not sure about casting it as an int though.
   for (int i = 0; i < (int)player2.size(); ++i) {
     player2[i] = toupper(player2[i]);
   }
-  std::cout << gameList[3] << std::endl;
-  std::cout << " " << std::endl;
-
     playerNames[0] = player1;
     playerNames[1] = player2;
 
@@ -62,7 +53,7 @@ std::string newGame::getCurrentPlayer()
 {
     return currentPlayer;
 }
-//call funtion switch player two switch between current player
+//call function switch player two switch between current player
 void newGame::switchPlayer()
 {
     if (play == 0)
@@ -125,7 +116,7 @@ void newGame::saveGame()
     MyWriteFile << playerNames[1] << "\n";
     MyWriteFile << p2.getPlayerScore() << "\n";
     MyWriteFile << "Player 2 hand goes here" << "\n";
-    MyWriteFile << "cuurent board state goes here" << "\n";
+    MyWriteFile << "current board state goes here" << "\n";
     MyWriteFile << "Tile bag content goes here" << "\n";
     MyWriteFile << getCurrentPlayer() << "\n";
     MyWriteFile.close();
