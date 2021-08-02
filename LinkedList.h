@@ -26,6 +26,15 @@ public:
     * Remove the value at the front of the Linked List
     */
     void removeFront();
+    /**
+    * Remove the value at the back of the Linked List
+    */
+    void removeBack();
+    
+    /**
+     * Clear all of the nodes in the linked list
+     */
+    void clear();
     
     /**
      * Return the current size of the Linked List.
