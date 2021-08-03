@@ -27,19 +27,19 @@ int main(void) {
   //START run tests
   // this is how you can create a new bag at the start of the game
 
-  Bag * newBag = new Bag();
-  Tile * redSquare = new Tile(RED, SQUARE);
-  std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
-  newBag -> addBack(redSquare);
-  std::cout << "Size of the Linked list is: " << newBag -> listSize() << std::endl;
-  newBag -> addTilesToBag(newBag);
-  newBag -> printNodes();
-  delete newBag;
+//   Bag * newBag = new Bag();
+//   Tile * redSquare = new Tile(RED, SQUARE);
+//   std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
+//   newBag -> addBack(redSquare);
+//   std::cout << "Size of the Linked list is: " << newBag -> listSize() << std::endl;
+//   newBag -> addTilesToBag(newBag);
+//   newBag -> printNodes();
+//   delete newBag;
 
-     testTileCreation();
-     testStudentCreation();
-     testLinkedListCreation();
-     playerTest();
+    //  testTileCreation();
+    //  testStudentCreation();
+    //  testLinkedListCreation();
+    //  playerTest();
 // END tests
 
   selectionMenu.selectionMenu();

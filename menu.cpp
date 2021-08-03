@@ -12,6 +12,7 @@
 
 #include "credits.h"
 #include "menu.h"
+#include "GameEngine.h"
 
 int length = 0;
 
@@ -80,6 +81,7 @@ void Menu::newGame() {
       std::move("Enter a name for player 2 (uppercase characters only)"));
   gameList.emplace_back(std::move("Let's Play!"));
 
+
   // Print Strings stored in Vector
   std::cout << " " << std::endl;
   std::cout << gameList[1] << std::endl;
@@ -99,6 +101,9 @@ void Menu::newGame() {
   }
   std::cout << gameList[3] << std::endl;
   std::cout << " " << std::endl;
+  // start the game engine
+  GameEngine * game = new GameEngine(player1, player2);
+  delete game;
 };
 
 void Menu::selectionMenu() {
