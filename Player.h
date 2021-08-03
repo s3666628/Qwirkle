@@ -4,6 +4,8 @@
 
 #include <string>
 
+#include <ostream>
+
 class Player
 {
 
