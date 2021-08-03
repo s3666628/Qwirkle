@@ -24,5 +24,3 @@ Shape Tile::getTileShape(){
     return *shape;
 }
 
-
-

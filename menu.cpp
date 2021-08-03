@@ -12,6 +12,8 @@
 
 #include "credits.h"
 #include "menu.h"
+#include "GameEngine.h"
+#include "newGame.h"
 
 int length = 0;
 
@@ -66,50 +68,55 @@ int Menu::mainMenu() {
     return EXIT_SUCCESS;
   }
 };
+//-------------------------------------------------------------------------------------
+// MOVED TO NEWGAME.CPP
+// void Menu::newGame() { 
 
-void Menu::newGame() {
-  // These are only initialised for testing purposes
-  // They should come from the Player files
-  std::string player1 = "";
-  std::string player2 = "";
-  std::vector<std::string> gameList;
-  gameList.emplace_back(std::move("Starting a New Game"));
-  gameList.emplace_back(
-      std::move("Enter a name for player 1 (uppercase characters only)"));
-  gameList.emplace_back(
-      std::move("Enter a name for player 2 (uppercase characters only)"));
-  gameList.emplace_back(std::move("Let's Play!"));
+//   // These are only initialised for testing purposes
+//   // They should come from the Player files
+//   std::string player1 = "";
+//   std::string player2 = "";
+//   std::vector<std::string> gameList;
+//   gameList.emplace_back(std::move("Starting a New Game"));
+//   gameList.emplace_back(
+//       std::move("Enter a name for player 1 (uppercase characters only)"));
+//   gameList.emplace_back(
+//       std::move("Enter a name for player 2 (uppercase characters only)"));
+//   gameList.emplace_back(std::move("Let's Play!"));
 
-  // Print Strings stored in Vector
-  std::cout << " " << std::endl;
-  std::cout << gameList[1] << std::endl;
-  std::cin >> player1;
-  // this will convert the user input to uppercase
-  // I'm not sure about casting it as an int though.
-  for (int i = 0; i < (int)player1.size(); ++i) {
-    player1[i] = toupper(player1[i]);
-  }
-  std::cout << " " << std::endl;
-  std::cout << gameList[2] << std::endl;
-  std::cin >> player2;
-  // this will convert the user input to uppercase
-  // I'm not sure about casting it as an int though.
-  for (int i = 0; i < (int)player2.size(); ++i) {
-    player2[i] = toupper(player2[i]);
-  }
-  std::cout << gameList[3] << std::endl;
-  std::cout << " " << std::endl;
-};
+//   // Print Strings stored in Vector
+//   std::cout << " " << std::endl;
+//   std::cout << gameList[1] << std::endl;
+//   std::cin >> player1;
+//   // this will convert the user input to uppercase
+//   // I'm not sure about casting it as an int though.
+//   for (int i = 0; i < (int)player1.size(); ++i) {
+//     player1[i] = toupper(player1[i]);
+//   }
+//   std::cout << " " << std::endl;
+//   std::cout << gameList[2] << std::endl;
+//   std::cin >> player2;
+//   // this will convert the user input to uppercase
+//   // I'm not sure about casting it as an int though.
+//   for (int i = 0; i < (int)player2.size(); ++i) {
+//     player2[i] = toupper(player2[i]);
+//   }
+//   std::cout << gameList[3] << std::endl;
+//   std::cout << " " << std::endl;
+// };
+//-------------------------------------------------------------------------------------
 
 void Menu::selectionMenu() {
   Credits printCredits;
+  newGame runGame;
   int selected = -1;
 
   while ((selected = Menu::mainMenu()) <= 4 && !std::cin.eof()) {
     if (selected == 1) {
       std::cout << "Starting a New Game" << std::endl;
       std::cout << "-------------------" << std::endl;
-      Menu::newGame();
+      runGame.runGame();
+      // Menu::newGame();
     } else if (selected == 2) {
       std::cout << "Enter the filename from which to load a game" << std::endl;
     } else if (selected == 3) {
