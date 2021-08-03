@@ -12,6 +12,7 @@
 
 #include "credits.h"
 #include "menu.h"
+#include "GameEngine.h"
 #include "newGame.h"
 
 int length = 0;
