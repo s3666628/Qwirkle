@@ -9,11 +9,16 @@
 #include <iostream>
 #include <string>
 
-GameEngine::GameEngine(){
-    // default contructor
-    // this->name = new std::string("default_name");
-    // this->GameEngineID = new std::string("default_StdID");
-    // this->email = new std::string("default_email");
+GameEngine::GameEngine(Player player1, Player player2){
+    std::cout << "Creating a new GameEngine Object: " << std::endl;
+    std::cout << "Using existing Player Object: " << std::endl;
+    // this->player1 = player1.;
+    // this->player2 = new Player(player_2_name);
+    std::cout << "Creating a game bag: " << std::endl;
+    this->gameTileBag = new Bag();
+    std::cout << "Adding Tiles to the game bag: " << std::endl;
+    // Bag * newBag = new Bag();
+    gameTileBag -> addTilesToBag(gameTileBag);
 
 }
 
@@ -28,6 +33,8 @@ GameEngine::GameEngine(std::string player_1_name, std::string player_2_name){
     std::cout << "Adding Tiles to the game bag: " << std::endl;
     // Bag * newBag = new Bag();
     gameTileBag -> addTilesToBag(gameTileBag);
+
+
 
 
 }

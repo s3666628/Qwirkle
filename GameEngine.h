@@ -21,6 +21,8 @@ public:
     //constructor
     GameEngine(std::string player_1_name, std::string player_2_name);
     //destructor
+    GameEngine(Player player1, Player player2);
+    //destructor
     ~GameEngine();
     //copy constructor
     GameEngine(GameEngine& other);

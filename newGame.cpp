@@ -1,9 +1,10 @@
 #include "newGame.h"
-#include "Player.h"
+// #include "Player.h"
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
+#include "GameEngine.h"
 
 newGame::newGame() {}
 newGame::~newGame() {}
@@ -73,6 +74,15 @@ void newGame::gamePlay() {
             << std::endl; // input score here
   std::cout << "Score for " << playerNames[1] << ":" << p2.getPlayerScore()
             << std::endl; // input score here
+
+  // From Phil 
+  // GameEngine = 
+
+  GameEngine * newGameEngine = new GameEngine(p1, p2);
+  delete newGameEngine;
+  // can call GameEngine here 
+
+
   // fetch board here
   // display current player hand here
 }
