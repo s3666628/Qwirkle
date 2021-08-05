@@ -4,6 +4,8 @@
 
 using namespace std;
 
+#include <ostream>
+
 Player::Player(std::string name)
 {
     this->name = name;
