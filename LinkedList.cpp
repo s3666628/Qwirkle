@@ -12,7 +12,7 @@ LinkedList::LinkedList() {
 
 LinkedList::~LinkedList() {
   // deconstructor
-  std::cout << "Calling Destructor to Delete all Nodes" << std::endl;
+  std::cout << "Calling Linked List Destructor to Delete all Nodes" << std::endl;
   Node *current = head;
   while (current != nullptr) {
     Node *next = current->next;

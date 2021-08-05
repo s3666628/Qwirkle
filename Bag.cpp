@@ -18,7 +18,7 @@ Bag::Bag() {
 
 Bag::~Bag() {
   // destructor
-  std::cout << "Deleting Bag Object and Attributes: " << std::endl;
+  std::cout << "Calling Bag Destructor - Deleting Bag Object and Attributes: " << std::endl;
   delete gameBag;
 }
 

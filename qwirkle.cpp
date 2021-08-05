@@ -26,6 +26,7 @@ int main(void)
 
     Board *board = new Board(26, &std::cout);
     board->display();
+       
 
     Menu selectionMenu;
     std::cout << "Welcome to Qwirkle!" << std::endl;
@@ -40,7 +41,10 @@ int main(void)
     std::cout << "Size of the Linked list is: " << newBag->listSize() << std::endl;
     newBag->addTilesToBag(newBag);
     newBag->printNodes();
+    // delete redSquare;
     delete newBag;
+    delete board;
+ 
 
     testTileCreation();
     testStudentCreation();

@@ -43,8 +43,8 @@ GameEngine::GameEngine(std::string player_1_name, std::string player_2_name) {
 GameEngine::~GameEngine() {
   // destructor
   std::cout << "Deleting GameEngine Object and Attributes: " << std::endl;
-  delete player1;
-  delete player2;
+  // delete player1;
+  // delete player2;
   delete gameTileBag;
 }
 

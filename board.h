@@ -15,6 +15,8 @@ public:
 
     Board(int size, std::ostream *outputStream);
 
+    ~Board();
+
     // Board();
 
     void display();
