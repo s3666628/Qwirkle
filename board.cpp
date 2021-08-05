@@ -18,6 +18,11 @@ Board::Board(int size, std::ostream *outputStream)
     }
 }
 
+Board::~Board(){
+    // destructor
+    std::cout << "Calling Board Destructor - Deleting Board Object and Attributes: " << std::endl;
+}
+
 // expanding the board
 void Board::reSize()
 {
