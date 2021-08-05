@@ -69,10 +69,11 @@ void Board::display()
 
                     *outputStream << this->getTile(i, j)->getTileColour() << this->getTile(i, j)->getTileShape();
                 }
-                else
+                // printTile ins't doing anything yet
+                /* else
                 {
                     this->getTile(i, j)->printTile();
-                }
+                } */
                 *outputStream << "|";
             }
             else

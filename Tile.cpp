@@ -26,7 +26,8 @@ Shape Tile::getTileShape()
     return *shape;
 }
 
-void Tile::printColoured()
+// printTile in here doesn't seem to do anything yet
+/* void Tile::printColoured()
 {
     if (outputStream != &std::cout)
     {
@@ -36,4 +37,4 @@ void Tile::printColoured()
     {
         // Colour codes a la this-> color == a color
     }
-}
+} */

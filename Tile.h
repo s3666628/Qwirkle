@@ -25,7 +25,7 @@ public:
     Shape getTileShape();
 
     void printTile();
-    void printColoured();
+   // void printColoured();
 
 private:
     Colour *colour;
