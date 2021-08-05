@@ -20,6 +20,7 @@ void testLinkedListCreation();
 void testStudentCreation();
 void playerTest();
 
+<<<<<<< HEAD
 int main(void)
 {
     //begin test of the board
@@ -54,6 +55,37 @@ int main(void)
     // need to include
 
     return EXIT_SUCCESS;
+=======
+
+int main(void) {
+  Menu selectionMenu;
+  std::cout << "Welcome to Qwirkle!" << std::endl;
+  std::cout << "-------------------" << std::endl;
+  //START run tests
+  // this is how you can create a new bag at the start of the game
+
+//   Bag * newBag = new Bag();
+//   Tile * redSquare = new Tile(RED, SQUARE);
+//   std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
+//   newBag -> addBack(redSquare);
+//   std::cout << "Size of the Linked list is: " << newBag -> listSize() << std::endl;
+//   newBag -> addTilesToBag(newBag);
+//   newBag -> printNodes();
+//   delete newBag;
+
+    //  testTileCreation();
+    //  testStudentCreation();
+    //  testLinkedListCreation();
+    //  playerTest();
+// END tests
+
+  selectionMenu.selectionMenu();
+
+  // these are tests so please un/comment as needed
+  // need to include
+
+  return EXIT_SUCCESS;
+>>>>>>> development
 }
 
 void testTileCreation()
