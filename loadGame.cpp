@@ -21,7 +21,7 @@ void loadGame::readFile()
     // std::cin >> fileName;
     //check if file name has a .txt at the back, if none add it
 
-    std::ifstream myfile ("example.txt");
+    std::ifstream myfile ("Tests/newGame.save");
 
     if (myfile.is_open())
     {

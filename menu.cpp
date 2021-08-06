@@ -14,6 +14,7 @@
 #include "menu.h"
 #include "GameEngine.h"
 #include "newGame.h"
+#include "loadGame.h"
 
 int length = 0;
 
@@ -109,6 +110,7 @@ int Menu::mainMenu() {
 void Menu::selectionMenu() {
   Credits printCredits;
   newGame runGame;
+  loadGame loadGame;
   int selected = -1;
 
   while ((selected = Menu::mainMenu()) <= 4 && !std::cin.eof()) {
@@ -118,7 +120,8 @@ void Menu::selectionMenu() {
       runGame.runGame();
       // Menu::newGame();
     } else if (selected == 2) {
-      std::cout << "Enter the filename from which to load a game" << std::endl;
+      // std::cout << "Enter the filename from which to load a game" << std::endl;
+      loadGame.readFile();
     } else if (selected == 3) {
       std::cout << "The Team!" << std::endl;
       std::cout << printCredits.printCredits() << std::endl;
