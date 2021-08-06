@@ -101,11 +101,24 @@ void newGame::runGame() {
 }
 
 void newGame::saveGame() {
+  std::string save = ".save";
 
   std::string fileName = "";
   std::cout << "Enter name you wish to give to save game file" << std::endl;
   std::cout << ">";
   std::cin >> fileName;
+  fileName = "Saved Games/" + fileName;
+
+    // check if file name has a .save at the back, if none add it
+    if (fileName.find(save) != std::string::npos)
+    {
+    }
+    else
+    {
+        fileName = fileName + save;
+    }
+
+    //check if file name already exists, if yes ask for new name
 
   std::ofstream MyWriteFile(fileName);
   MyWriteFile << playerNames[0] << "\n";
@@ -122,4 +135,6 @@ void newGame::saveGame() {
               << "\n";
   MyWriteFile << getCurrentPlayer() << "\n";
   MyWriteFile.close();
+
+  std::cout << "Game Successfully Saved" << std::endl;
 }

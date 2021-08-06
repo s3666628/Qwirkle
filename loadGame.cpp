@@ -14,14 +14,26 @@ void loadGame::readFile()
 {
     std::string read = "";
     std::string fileName = "";
+    std::string save = ".save";
     int i;
 
-    // std::cout << "Enter name of file you want to load:" << std::endl;
-    // std::cout << ">";
-    // std::cin >> fileName;
-    //check if file name has a .txt at the back, if none add it
+    std::cout << "Enter name of file you want to load:" << std::endl;
+    std::cout << ">";
+    std::cin >> fileName;
+    fileName = "Saved Games/" + fileName;
 
-    std::ifstream myfile ("Tests/newGame.save");
+    // check if file name has a .save at the back, if none add it
+    if (fileName.find(save) != std::string::npos)
+    {
+    }
+    else
+    {
+        fileName = fileName + save;
+    }
+
+    //check if file name exists, if no ask for new name
+
+    std::ifstream myfile (fileName);
 
     if (myfile.is_open())
     {
