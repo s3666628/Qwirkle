@@ -109,31 +109,31 @@ void newGame::saveGame() {
   std::cin >> fileName;
   fileName = "Saved Games/" + fileName;
 
-    // check if file name has a .save at the back, if none add it
-    if (fileName.find(save) != std::string::npos)
-    {
-    }
-    else
-    {
-        fileName = fileName + save;
-    }
-
-    //check if file name already exists, if yes ask for new name
-
+  // check if file name has a .save at the back, if none add it
+  if (fileName.find(save) != std::string::npos)
+  {
+  }
+  else
+  {
+      fileName = fileName + save;
+  }
+  //open new file 
   std::ofstream MyWriteFile(fileName);
+  //write to file
   MyWriteFile << playerNames[0] << "\n";
   MyWriteFile << p1.getPlayerScore() << "\n";
-  MyWriteFile << "Player 1 Hand goes here"
+  MyWriteFile << p1.getPlayerHand()
               << "\n";
   MyWriteFile << playerNames[1] << "\n";
   MyWriteFile << p2.getPlayerScore() << "\n";
-  MyWriteFile << "Player 2 hand goes here"
+  MyWriteFile << p2.getPlayerHand()
               << "\n";
   MyWriteFile << "current board state goes here"
               << "\n";
   MyWriteFile << "Tile bag content goes here"
               << "\n";
   MyWriteFile << getCurrentPlayer() << "\n";
+  //close file
   MyWriteFile.close();
 
   std::cout << "Game Successfully Saved" << std::endl;

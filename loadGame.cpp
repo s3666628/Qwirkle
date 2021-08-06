@@ -31,8 +31,6 @@ void loadGame::readFile()
         fileName = fileName + save;
     }
 
-    //check if file name exists, if no ask for new name
-
     std::ifstream myfile (fileName);
 
     if (myfile.is_open())
@@ -86,8 +84,9 @@ void loadGame::readFile()
                 //add current player to current player
             }
         }
+        //close file
         myfile.close();
     }
 
-    else std::cout << "Unable to open file"; 
+    else std::cout << fileName << "does not exist" << std::endl; 
 }
