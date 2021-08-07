@@ -7,6 +7,7 @@ public:
 
     ~loadGame();
     void readFile();
+    char arrBag[0];
 
 private:
     std::string read;

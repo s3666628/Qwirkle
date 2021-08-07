@@ -4,6 +4,7 @@
 //
 
 #include "Bag.h"
+#include "loadGame.h"
 #include <iostream>
 #include "Tile.h"
 #include "TileCodes.h"
@@ -33,6 +34,26 @@ void Bag::addTilesToBag(Bag * gameBag) {
     ++counter;
   }
 }
+
+//Guy trying to create a bag not randomly generated.
+// void Bag::loadGameTileBag(Bag * gameBag)
+// {
+//   int counter = 0;//will need to count how many tile have already left the bag
+//   int i = 0;
+//   int j = 0; 
+//   //loop and add tiles to the bag
+//   while (counter < MAX_BAG_TILES)
+//   {
+//     for (i; i < 5; i++)
+//     {
+//       for (j; j < 5; j++)
+//       {
+//         Tile * loadTile = new Tile(RED, CIRCLE);
+//         gameBag -> addFront(loadTile);
+//       }
+//     }
+//   }
+// }
 
 Colour Bag::randomColour() {
   Colour randomColour;

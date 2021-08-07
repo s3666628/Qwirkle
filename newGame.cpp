@@ -44,7 +44,10 @@ void newGame::addPlayers() {
   play = 0;
 }
 
-std::string newGame::getCurrentPlayer() { return currentPlayer; }
+std::string newGame::getCurrentPlayer() 
+{ 
+  return currentPlayer; 
+}
 // call function switch player two switch between current player
 void newGame::switchPlayer() {
   if (play == 0) {
@@ -85,9 +88,21 @@ void newGame::gamePlay() {
   delete newGameEngine;
   // can call GameEngine here 
 
-
   // fetch board here
-  // display current player hand here
+  // Check to see who current player is and display current player hand
+  if (playerNames[0] == getCurrentPlayer())
+  {
+    std::cout << getCurrentPlayer() << "s hand: " << p1.getPlayerHand() << std::endl;
+  }
+
+  else if (playerNames[1] == getCurrentPlayer())
+  {
+    std::cout << getCurrentPlayer() << "s hand: " << p2.getPlayerHand() << std::endl;
+  }
+  else 
+  {
+    std::cout << "We have a problem with names!!";
+  }
 }
 
 void newGame::runGame() {
@@ -97,7 +112,7 @@ void newGame::runGame() {
   gamePlay();
   // update game stats
 
-  saveGame();
+  // saveGame();
 }
 
 void newGame::saveGame() {

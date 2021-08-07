@@ -76,7 +76,10 @@ void loadGame::readFile()
             else if (i==7)
             {
                 std::cout << read << '\n';
-                //add tile bag content to tile bag
+                //put tile bag contents into char array
+                arrBag[0] = read.size() + 1;
+                strcpy(arrBag, read.c_str());
+                std::cout << arrBag << std::endl;
             }
             else if (i==8)
             {
