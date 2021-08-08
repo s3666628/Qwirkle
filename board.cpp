@@ -134,7 +134,7 @@ void Board::displayBoard()
     int head_row_counter = 1;
     // print out the header row
     std::cout << " ";
-    while(head_row_counter < board.size()){
+    while(head_row_counter < (int)board.size()){
       if (head_row_counter < 11){
             std::cout  << " |" << head_row_counter;
             head_row_counter = head_row_counter + 1;
@@ -149,14 +149,14 @@ void Board::displayBoard()
     std::cout << std::endl;
     char row_char = 'A';
 
-    while (row_counter < board.size())
+    while (row_counter < (int)board.size())
     {
         // reset colum counter before each run
         int col_counter = 0;
         std::cout << row_char << " ";
         row_char = row_char +1;
 
-        while (col_counter < board.size())
+        while (col_counter < (int)board.size())
         {   
             if (board[row_counter][col_counter] == nullptr){
 

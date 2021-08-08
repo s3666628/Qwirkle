@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+// #include <cstring>
+#include "string.h"
 
 #include "loadGame.h"
 
