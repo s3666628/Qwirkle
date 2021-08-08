@@ -36,24 +36,29 @@ void Bag::addTilesToBag(Bag * gameBag) {
 }
 
 //Guy trying to create a bag not randomly generated.
-// void Bag::loadGameTileBag(Bag * gameBag)
-// {
-//   int counter = 0;//will need to count how many tile have already left the bag
-//   int i = 0;
-//   int j = 0; 
-//   //loop and add tiles to the bag
-//   while (counter < MAX_BAG_TILES)
-//   {
-//     for (i; i < 5; i++)
-//     {
-//       for (j; j < 5; j++)
-//       {
-//         Tile * loadTile = new Tile(RED, CIRCLE);
-//         gameBag -> addFront(loadTile);
-//       }
-//     }
-//   }
-// }
+void Bag::loadGameTileBag(Bag * gameBag)
+{
+  loadGame loadGame;
+  int counter = 0;//will need to count how many tile have already left the bag
+  int counter2 = 0;
+  int counter3 = 0;
+
+  //loop and add tiles to the bag
+  while (counter < MAX_BAG_TILES)
+  {
+    for (int i = 0; i < 1; i++)
+    {
+      for (int j = 0; j < 1; j++)
+      {
+        Tile * loadTile = new Tile(loadGame.getArrBag(counter2), loadGame.getArrBag(counter3));
+        gameBag -> addFront(loadTile);
+        counter++;
+        counter3++;
+      }
+      counter2++;
+    }
+  }
+}
 
 Colour Bag::randomColour() {
   Colour randomColour;

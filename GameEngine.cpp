@@ -40,6 +40,20 @@ GameEngine::GameEngine(std::string player_1_name, std::string player_2_name) {
   gameTileBag->addTilesToBag(gameTileBag);
   // add tiles to player bags
 }
+
+//Created by Guy - to add contents of saved to to game bag
+void GameEngine::gameBagFromFile(std::string player_1_name, std::string player_2_name)
+{
+  this->player1 = new Player(player_1_name);
+  this->player2 = new Player(player_2_name);
+  std::cout << "Creating a game bag: " << std::endl;
+  this->gameTileBag = new Bag();
+  std::cout << "Adding Tiles to the game bag: " << std::endl;
+  // Bag * newBag = new Bag();
+  gameTileBag->loadGameTileBag(gameTileBag);
+  // add tiles to player bags
+}
+
 GameEngine::~GameEngine() {
   // destructor
   std::cout << "Deleting GameEngine Object and Attributes: " << std::endl;

@@ -1,4 +1,7 @@
 #include <string>
+#include <iostream>
+
+#define ARRAY_SIZE 108
 
 class loadGame
 {
@@ -7,10 +10,12 @@ public:
 
     ~loadGame();
     void readFile();
-    char arrBag[0];
+
+    char getArrBag(int num);
 
 private:
     std::string read;
     std::string fileName;
+    char arrBag[ARRAY_SIZE];
 
 };

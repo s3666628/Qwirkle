@@ -93,3 +93,9 @@ void loadGame::readFile()
 
     else std::cout << fileName << "does not exist" << std::endl; 
 }
+
+//retrive contents of bag array - used in Bag.cpp
+char loadGame::getArrBag(int num)
+{
+    return arrBag[num];
+}
