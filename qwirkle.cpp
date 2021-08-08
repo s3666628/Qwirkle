@@ -24,8 +24,8 @@ int main(void)
 {
     //begin test of the board
 
-    Board *board = new Board(26, &std::cout);
-    board->display();
+    // Board *board = new Board(26, &std::cout);
+    // board->display();
        
 
     Menu selectionMenu;
@@ -34,22 +34,22 @@ int main(void)
     //START run tests
     // this is how you can create a new bag at the start of the game
 
-    Bag *newBag = new Bag();
-    Tile *redSquare = new Tile(RED, SQUARE);
-    std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
-    newBag->addBack(redSquare);
-    std::cout << "Size of the Linked list is: " << newBag->listSize() << std::endl;
-    newBag->addTilesToBag(newBag);
-    newBag->printNodes();
-    // delete redSquare;
-    delete newBag;
-    delete board;
+    // Bag *newBag = new Bag();
+    // Tile *redSquare = new Tile(RED, SQUARE);
+    // std::cout << "Add Node to the Back and then Print out the Linked List " << std::endl;
+    // newBag->addBack(redSquare);
+    // std::cout << "Size of the Linked list is: " << newBag->listSize() << std::endl;
+    // newBag->addTilesToBag(newBag);
+    // newBag->printNodes();
+    // // delete redSquare;
+    // delete newBag;
+    // delete board;
  
 
-    testTileCreation();
-    testStudentCreation();
-    testLinkedListCreation();
-    playerTest();
+    // testTileCreation();
+    // testStudentCreation();
+    // testLinkedListCreation();
+    // playerTest();
     // END tests
 
     selectionMenu.selectionMenu();

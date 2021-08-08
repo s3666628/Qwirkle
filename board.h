@@ -21,6 +21,8 @@ public:
 
     void display();
 
+    void displayBoard();
+
     int getSize();
 
     Tile *getTile(int row, int col);

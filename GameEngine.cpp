@@ -8,6 +8,7 @@
 #include "GameEngine.h"
 #include <iostream>
 #include <string>
+#include "board.h"
 
 void addTilesToPlayerHand(unsigned int numTiles, Player player, Bag *gameBag);
 
@@ -25,6 +26,26 @@ GameEngine::GameEngine(Player player1, Player player2) {
   // add tiles to each players hand at the start of the game
   addTilesToPlayerHand(6, player1, gameTileBag);
   addTilesToPlayerHand(6, player2, gameTileBag);
+  // generate a new board
+    Board *board = new Board(26, &std::cout);
+    board->display();
+    // int *iPtr = &i; 
+    // Tile *tilePtr = &player1.getPlayerHand()->get(0);
+    
+    Tile *playerTile = new Tile(player1.getPlayerHand()->get(0));
+    std::cout << "The size of the board  before adding tile is : " << board->getSize() << std::endl;
+    board->setTile(0, 0, playerTile);
+    std::cout << "The size of the board after adding tile is : " << board->getSize() << std::endl;
+    
+    board->display();
+    // board->toString();
+    // Tile *boardTile = new Tile(board->getTile(0,0));
+    Tile *boardTile = board->getTile(0,0);
+    std::cout << "Tile Colour" << boardTile->getTileColour() << std::endl;
+    std::cout << "Tile Shape" << boardTile->getTileShape() << std::endl;
+    board->displayBoard();
+
+
 }
 
 GameEngine::GameEngine(std::string player_1_name, std::string player_2_name) {
