@@ -10,7 +10,7 @@
 #include <string>
 #include "board.h"
 
-void addTilesToPlayerHand(unsigned int numTiles, Player player, Bag *gameBag);
+void addTilesToPlayerHand(int numTiles, Player player, Bag *gameBag);
 
 GameEngine::GameEngine(Player player1, Player player2) {
   std::cout << "Creating a new GameEngine Object: " << std::endl;
@@ -110,7 +110,7 @@ GameEngine::~GameEngine() {
   delete gameTileBag;
 }
 
-void addTilesToPlayerHand(unsigned int numTiles, Player player, Bag *gameBag) {
+void addTilesToPlayerHand(int numTiles, Player player, Bag *gameBag) {
 
   // int numStartingTiles = 6;
   int loopCounter = 0;
