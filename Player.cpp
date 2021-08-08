@@ -63,3 +63,9 @@ string *Player::getPlayerNamePtr()
     string *namePtr = &name;
     return namePtr;
 }
+
+void Player::printPlayerHand()
+{
+    this->hand->printNodes();
+   
+}

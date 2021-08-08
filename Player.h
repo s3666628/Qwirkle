@@ -31,6 +31,8 @@ public:
 
     void setPlayerHand(LinkedList *hand);
 
+    void printPlayerHand();
+
     LinkedList *getPlayerHand();
 
     // to return player score stored in int type
