@@ -6,7 +6,7 @@
 Tile::Tile(Colour colour, Shape shape)
 {
     // default contructor
-    std::cout << "Creating a new Shape Object: " << std::endl;
+    // std::cout << "Creating a new Shape Object: " << std::endl;
     this->colour = new Colour(colour);
     this->shape = new Shape(shape);
 }

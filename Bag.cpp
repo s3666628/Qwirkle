@@ -29,10 +29,11 @@ void Bag::addTilesToBag(Bag * gameBag) {
   // loop to add tiles to the bag
   while (counter < MAX_BAG_TILES) {
     Tile * randomTile = new Tile(randomColour(), randomShape());
-    std::cout << "Adding Tile Numer: " << counter << " to the bag: " << std::endl;
+    // std::cout << "Adding Tile Numer: " << counter << " to the bag: " << std::endl;
     gameBag -> addFront(randomTile);
     ++counter;
   }
+  std::cout << "Bag is full, total Tiles in the bag:  " << gameBag->listSize() << std::endl;
 }
 
 //Guy trying to create a bag not randomly generated.
@@ -83,7 +84,7 @@ Colour Bag::randomColour() {
   } else {
     randomColour = PURPLE;
   }
-  std::cout << "Randomly-chosen colour: " << colourValue << std::endl;
+  // std::cout << "Randomly-chosen colour: " << colourValue << std::endl;
   return randomColour;
 }
 
@@ -111,7 +112,7 @@ Shape Bag::randomShape() {
   } else {
     randomShape = CLOVER;
   }
-  std::cout << "Randomly-chosen shape: " << shapeValue << std::endl;
+  // std::cout << "Randomly-chosen shape: " << shapeValue << std::endl;
 
   return randomShape;
 }
