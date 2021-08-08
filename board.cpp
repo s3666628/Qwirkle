@@ -197,7 +197,9 @@ std::string Board::toString() {
   }
   return output;
 }
-int Board::getSize() { return (int)board.size(); }
+int Board::getSize() { 
+  
+  return board.size(); }
 
 Tile *Board::getTile(int row, int col) {
   Tile *tile = nullptr;
