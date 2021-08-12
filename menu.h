@@ -54,7 +54,7 @@ public:
   void selectionMenu();
   void clear();
   void quit();
-  void newGame();
+  // void newGame();
 
 private:
   Menu *colour;

@@ -12,7 +12,7 @@ LinkedList::LinkedList() {
 
 LinkedList::~LinkedList() {
   // deconstructor
-  std::cout << "Calling Destructor to Delete all Nodes" << std::endl;
+  std::cout << "Calling Linked List Destructor to Delete all Nodes" << std::endl;
   Node *current = head;
   while (current != nullptr) {
     Node *next = current->next;
@@ -142,13 +142,13 @@ void LinkedList::printNodes() {
   unsigned int count = 0;
   Node *current = head;
   //      // look unit we get to the tail node
+  std::cout << "Your hand is " << std::endl;
   while (current != nullptr) {
-    std::cout << "Value of node at position: " << count << " : "
-              << current->tile->getTileColour() << current->tile->getTileShape()
-              << std::endl;
+    std::cout << current->tile->getTileColour() << current->tile->getTileShape() << ",";
     ++count;
     current = current->next;
   }
+  std::cout << std::endl;
   //   }
 }
 
