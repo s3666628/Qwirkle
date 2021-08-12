@@ -5,6 +5,9 @@
 
 #include "credits.h"
 #include "menu.h"
+#include "GameEngine.h"
+#include "newGame.h"
+#include "loadGame.h"
 
 int length = 0;
 
@@ -60,47 +63,20 @@ int Menu::mainMenu() {
   }
 };
 
-void Menu::newGame() {
-  std::string player1 = "";
-  std::string player2 = "";
-  std::vector<std::string> gameList;
-  gameList.emplace_back(std::move("Starting a New Game"));
-  gameList.emplace_back(
-      std::move("Enter a name for player 1 (uppercase characters only)"));
-  gameList.emplace_back(
-      std::move("Enter a name for player 2 (uppercase characters only)"));
-  gameList.emplace_back(std::move("Let's Play!"));
-
-  // Print Strings stored in Vector
-  std::cout << " " << std::endl;
-  std::cout << gameList[1] << std::endl;
-  std::cin >> player1;
-  // Convert player1 input to uppercase
-  for (int i = 0; i < (int)player1.size(); ++i) {
-    player1[i] = toupper(player1[i]);
-  }
-  std::cout << " " << std::endl;
-  std::cout << gameList[2] << std::endl;
-  std::cin >> player2;
-  // Convert player2 input to uppercase
-  for (int i = 0; i < (int)player2.size(); ++i) {
-    player2[i] = toupper(player2[i]);
-  }
-  std::cout << gameList[3] << std::endl;
-  std::cout << " " << std::endl;
-};
-
 void Menu::selectionMenu() {
   Credits printCredits;
+  newGame runGame;
+  loadGame loadGame;
   int selected = -1;
 
   while ((selected = Menu::mainMenu()) <= 4 && !std::cin.eof()) {
     if (selected == 1) {
       std::cout << "Starting a New Game" << std::endl;
       std::cout << "-------------------" << std::endl;
-      Menu::newGame();
+      runGame.runGame();
     } else if (selected == 2) {
-      std::cout << "Enter the filename from which to load a game" << std::endl;
+      // std::cout << "Enter the filename from which to load a game" << std::endl;
+      loadGame.readFile();
     } else if (selected == 3) {
       std::cout << "The Team!" << std::endl;
       std::cout << printCredits.printCredits() << std::endl;
