@@ -1,3 +1,10 @@
+// Sources to make Terminal Colours
+// https://stackoverflow.com/questions/9158150/colored-output-in-c
+// https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a
+// https://www.codegrepper.com/code-examples/actionscript/ansi+colors+orange
+// https://solarianprogrammer.com/2019/04/08/c-programming-ansi-escape-codes-windows-macos-linux-terminals/
+// https://www.geeksforgeeks.org/array-strings-c-3-different-ways-create/
+
 #include <iostream>
 #include <sstream>
 #include <string>
