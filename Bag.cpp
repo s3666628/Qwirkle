@@ -36,7 +36,7 @@ void Bag::addTilesToBag(Bag * gameBag) {
   std::cout << "Bag is full, total Tiles in the bag:  " << gameBag->listSize() << std::endl;
 }
 
-//Guy trying to create a bag not randomly generated.
+//Created by Guy - trying to create a bag not randomly generated.
 void Bag::loadGameTileBag(Bag * gameBag)
 {
   loadGame loadGame;

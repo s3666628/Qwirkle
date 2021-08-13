@@ -50,27 +50,49 @@ GameEngine::GameEngine(Player player1, Player player2) {
 
     // allow player to select a tile from the bag and place it on the board
 
-    // show player 1 hand
-    std::cout << player1.getPlayerName() << " ";    
-    player1.printPlayerHand();
+    int i = 0;
 
-    // ask player which tile they want to select from their hand
-    int tileNumber =0;
-    int rowNumber = 0;
-    int colNumber = 0;
-    std::cout << "please select a tile from your hand " << std::endl;  
-    // ask player where they want to place the tile on the board
-    std::cin >> tileNumber;
-    Tile *playerTile = new Tile(player1.getPlayerHand()->get(tileNumber));
-    std::cout << "please Enter Board Co-Ordinates for the tile Row and then Column" << std::endl; 
-    std::cin >> rowNumber;
-    std::cin >> colNumber;
-    std::cout << "Tile will be placed on board at ROW:" << rowNumber << " COL: " <<colNumber << std::endl;
-    board->setTile(rowNumber, colNumber, playerTile);
-    board->displayBoard();
+    while (i < 36)
+    {
+      // show player 1 hand
+      std::cout << player1.getPlayerName() << " ";    
+      player1.printPlayerHand();
 
+      // ask player which tile they want to select from their hand
+      int tileNumber =0;
+      int rowNumber = 0;
+      int colNumber = 0;
+      std::cout << "please select a tile from your hand " << std::endl;  
+      // ask player where they want to place the tile on the board
+      std::cin >> tileNumber;
+      Tile *playerTile = new Tile(player1.getPlayerHand()->get(tileNumber));
+      std::cout << "please Enter Board Co-Ordinates for the tile Row and then Column" << std::endl; 
+      std::cin >> rowNumber;
+      std::cin >> colNumber;
+      std::cout << "Tile will be placed on board at ROW:" << rowNumber << " COL: " <<colNumber << std::endl;
+      board->setTile(rowNumber, colNumber, playerTile);
+      board->displayBoard();
 
+          // show player 1 hand
+      std::cout << player2.getPlayerName() << " ";    
+      player2.printPlayerHand();
 
+      // ask player which tile they want to select from their hand
+      tileNumber =0;
+      rowNumber = 0;
+      colNumber = 0;
+      std::cout << "please select a tile from your hand " << std::endl;  
+      // ask player where they want to place the tile on the board
+      std::cin >> tileNumber;
+      Tile *playerTile2 = new Tile(player2.getPlayerHand()->get(tileNumber));
+      std::cout << "please Enter Board Co-Ordinates for the tile Row and then Column" << std::endl; 
+      std::cin >> rowNumber;
+      std::cin >> colNumber;
+      std::cout << "Tile will be placed on board at ROW:" << rowNumber << " COL: " <<colNumber << std::endl;
+      board->setTile(rowNumber, colNumber, playerTile2);
+      board->displayBoard();
+      i++;
+    }
 
 
 }
